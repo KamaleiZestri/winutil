@@ -1,4 +1,32 @@
 {
+  "WPFTweaksBlockApps" :{
+    "Content": "Block User Apps",
+    "Description": "Block Users from running non-installed apps.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CURRENTCONTROLSET\\SERVICES\\AppIDSvc",
+        "Name": "Start",
+        "Type": "DWord",
+        "Value": "2",
+        "OriginalValue": "4"
+      }
+    ],
+    "InvokeScript": [
+      "
+      net start \"AppIDSvc\"
+      Set-AppLockerPolicy -XMLPolicy res/AppsPolicy.xml
+      "
+    ],
+    "UndoScript": [
+      "
+      net stop \"AppIDSvc\"
+      Set-AppLockerPolicy -XMLPolicy res/ClearAppsPolicy.xml
+      "
+    ]
+  },
   "WPFTweaksAH": {
     "Content": "Disable Activity History",
     "Description": "This erases recent docs, clipboard, and run history.",

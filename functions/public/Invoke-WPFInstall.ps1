@@ -31,6 +31,7 @@ function Invoke-WPFInstall {
             $packagesWinget = [System.Collections.ArrayList]::new()
             $packagesChoco = [System.Collections.ArrayList]::new()
 
+        # TODO z: integrate here to install locally first.
         foreach ($package in $PackagesToInstall) {
             if ($ChocoPreference) {
                 if ($package.choco -eq "na") {
@@ -54,6 +55,7 @@ function Invoke-WPFInstall {
         return $packagesWinget, $packagesChoco
         }.Invoke($PackagesToInstall)
 
+        # TODO z: maybe remove these installs...
         try {
             $sync.ProcessRunning = $true
             $errorPackages = @()
