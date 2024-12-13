@@ -1,17 +1,34 @@
 {
+  "WPFTweaksCleanUserProfiles" :
+  {
+    "Content": "Install CleanUserProfiles",
+    "Description": "Automatically delete user profiles on restart. Works on shutdown too if hibernation is off.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript":[
+      "
+        Install-WinUtilCleanUserProfiles -install $true
+      "
+    ],
+    "UndoScript":[
+      "
+        Install-WinUtilCleanUserProfiles -install $false
+      "
+    ],
+    "link": "https://github.com/KamaleiZestri/CleanUserProfiles"
+  },
   "WPFTweaksBlockApps" :{
     "Content": "Block User Apps",
     "Description": "Block Users from running non-installed apps.",
     "category": "Essential Tweaks",
     "panel": "1",
     "Order": "a005_",
-    "registry": [
+    "service" : [
       {
-        "Path": "HKLM:\\SYSTEM\\CURRENTCONTROLSET\\SERVICES\\AppIDSvc",
-        "Name": "Start",
-        "Type": "DWord",
-        "Value": "2",
-        "OriginalValue": "4"
+        "Name": "AppIDSvc",
+        "StartupType": "Automatic",
+        "OriginalType": "Disabled"
       }
     ],
     "InvokeScript": [
