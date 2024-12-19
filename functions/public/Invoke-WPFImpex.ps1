@@ -25,7 +25,7 @@ function Invoke-WPFImpex {
                 "export" { $FileBrowser = New-Object System.Windows.Forms.SaveFileDialog }
                 "import" { $FileBrowser = New-Object System.Windows.Forms.OpenFileDialog }
             }
-            $FileBrowser.InitialDirectory = [Environment]::GetFolderPath('Desktop')
+            $FileBrowser.InitialDirectory = $PSScriptRoot
             $FileBrowser.Filter = "JSON Files (*.json)|*.json"
             $FileBrowser.ShowDialog() | Out-Null
 
@@ -46,7 +46,7 @@ function Invoke-WPFImpex {
                 if ($Config) {
                     $jsonFile = Get-WinUtilCheckBoxes -unCheck $false | ConvertTo-Json
                     $jsonFile | Out-File $Config -Force
-                    "iex ""& { `$(irm christitus.com/win) } -Config '$Config'""" | Set-Clipboard
+                    # "iex ""& { `$(irm christitus.com/win) } -Config '$Config'""" | Set-Clipboard
                 }
             } catch {
                 Write-Error "An error occurred while exporting: $_"
