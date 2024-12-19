@@ -9,10 +9,10 @@ function Install-WinUtilCleanUserProfiles
     {
         # Add file to system
 
-        if (Test-Path -Path "C:\Windows\System32\GroupPolicy\Machine\Scripts\Shutdown")
+        if (!(Test-Path -Path "C:\Windows\System32\GroupPolicy\Machine\Scripts\Shutdown"))
             {mkdir "C:\Windows\System32\GroupPolicy\Machine\Scripts\Shutdown"}
 
-        Copy "res/CleanUserProfiles.ps1" "C:\Windows\System32\GroupPolicy\Machine\Scripts\Shutdown\"
+        Copy-Item "res/CleanUserProfiles.ps1" -Destination "C:\Windows\System32\GroupPolicy\Machine\Scripts\Shutdown"
 
         # Edit registry
         New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -ErrorAction SilentlyContinue | Out-Null
