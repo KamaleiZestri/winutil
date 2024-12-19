@@ -248,6 +248,12 @@ $commonKeyEvents = {
         }
         $sync.SearchBar.Focus()
     }
+
+    # shortcut to import
+    if ($_.Key -eq "I" -and $_.KeyboardDevice.Modifiers -eq "Ctrl") {
+        Write-Debug "Import ran via shortcut."
+        Invoke-WPFImpex -type "import"
+    }
 }
 
 $sync["Form"].Add_PreViewKeyDown($commonKeyEvents)
