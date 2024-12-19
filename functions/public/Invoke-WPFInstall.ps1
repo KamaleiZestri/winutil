@@ -27,47 +27,64 @@ function Invoke-WPFInstall {
         } else {
             $sync.form.Dispatcher.Invoke([action]{ Set-WinUtilTaskbaritem -state "Normal" -value 0.01 -overlay "logo" })
         }
-        $packagesWinget, $packagesChoco = {
+        $packagesWinget,$packagesChoco,$packagesLocal = {
             $packagesWinget = [System.Collections.ArrayList]::new()
             $packagesChoco = [System.Collections.ArrayList]::new()
+            $packagesLocal = [System.Collections.Hashtable]::new()
 
-        # TODO z: integrate here to install locally first.
-        foreach ($package in $PackagesToInstall) {
-            if ($ChocoPreference) {
-                if ($package.choco -eq "na") {
+            foreach ($package in $PackagesToInstall) {
+                if ($package.local -eq "na")
+                {
                     $packagesWinget.add($package.winget)
                     Write-Host "Queueing $($package.winget) for Winget install"
-                } else {
-                    $null = $packagesChoco.add($package.choco)
-                    Write-Host "Queueing $($package.choco) for Chocolatey install"
                 }
-            }
-            else {
-                if ($package.winget -eq "na") {
-                    $packagesChoco.add($package.choco)
-                    Write-Host "Queueing $($package.choco) for Chocolatey install"
-                } else {
-                    $null = $packagesWinget.add($($package.winget))
-                    Write-Host "Queueing $($package.winget) for Winget install"
+                else
+                {
+                    $packagesLocal.add($package.local,$package.args)
+                    Write-Host "Queueing $($package.local) for Local install"
                 }
-            }
+
+            # if ($ChocoPreference) {
+            #     if ($package.choco -eq "na") {
+            #         $packagesWinget.add($package.winget)
+            #         Write-Host "Queueing $($package.winget) for Winget install"
+            #     } else {
+            #         $null = $packagesChoco.add($package.choco)
+            #         Write-Host "Queueing $($package.choco) for Chocolatey install"
+            #     }
+            # }
+            # else {
+            #     if ($package.winget -eq "na") {
+            #         $packagesChoco.add($package.choco)
+            #         Write-Host "Queueing $($package.choco) for Chocolatey install"
+            #     } else {
+            #         $null = $packagesWinget.add($($package.winget))
+            #         Write-Host "Queueing $($package.winget) for Winget install"
+            #     }
+            # }
         }
-        return $packagesWinget, $packagesChoco
+        return $packagesWinget, $packagesChoco, $packagesLocal
         }.Invoke($PackagesToInstall)
 
-        # TODO z: maybe remove these installs...
+
         try {
             $sync.ProcessRunning = $true
             $errorPackages = @()
-            if($packagesWinget.Count -gt 0) {
-                Install-WinUtilWinget
-                Install-WinUtilProgramWinget -Action Install -Programs $packagesWinget
 
+            if($packagesLocal.Count -gt 0) {
+                Install-WinUtilProgramLocal -Action Install -Programs $packagesLocal
             }
-            if($packagesChoco.Count -gt 0) {
-                Install-WinUtilChoco
-                Install-WinUtilProgramChoco -Action Install -Programs $packagesChoco
-            }
+
+            #TODO temporary no winget...
+            # if($packagesWinget.Count -gt 0) {
+            #     Install-WinUtilWinget
+            #     Install-WinUtilProgramWinget -Action Install -Programs $packagesWinget
+
+            # }
+            # if($packagesChoco.Count -gt 0) {
+            #     Install-WinUtilChoco
+            #     Install-WinUtilProgramChoco -Action Install -Programs $packagesChoco
+            # }
             Write-Host "==========================================="
             Write-Host "--      Installs have finished          ---"
             Write-Host "==========================================="

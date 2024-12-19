@@ -54,6 +54,8 @@ Function Get-WinUtilCheckBoxes {
                         [PsCustomObject]@{
                             winget="$($sync.configs.applications.$($CheckBox.Name).winget)";
                             choco="$($sync.configs.applications.$($CheckBox.Name).choco)";
+                            local="$($sync.configs.applications.$($CheckBox.Name).local)";
+                            args="$($sync.configs.applications.$($CheckBox.Name).args)"
                         }
 
                     }

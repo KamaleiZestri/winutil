@@ -37,37 +37,52 @@ function Invoke-WPFUnInstall {
         } else {
             $sync.form.Dispatcher.Invoke([action]{ Set-WinUtilTaskbaritem -state "Normal" -value 0.01 -overlay "logo" })
         }
-        $packagesWinget, $packagesChoco = {
+        $packagesWinget, $packagesChoco, $packagesLocal = {
             $packagesWinget = [System.Collections.ArrayList]::new()
             $packagesChoco = [System.Collections.ArrayList]::new()
+            $packagesLocal = [System.Collections.Hashtable]::new()
 
         foreach ($package in $PackagesToInstall) {
-            if ($ChocoPreference) {
-                if ($package.choco -eq "na") {
-                    $packagesWinget.add($package.winget)
-                    Write-Host "Queueing $($package.winget) for Winget uninstall"
-                } else {
-                    $null = $packagesChoco.add($package.choco)
-                    Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
-                }
+            if ($package.local -eq "na")
+            {
+                $packagesWinget.add($package.winget)
+                Write-Host "Queueing $($package.winget) for Winget install"
             }
-            else {
-                if ($package.winget -eq "na") {
-                    $packagesChoco.add($package.choco)
-                    Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
-                } else {
-                    $null = $packagesWinget.add($($package.winget))
-                    Write-Host "Queueing $($package.winget) for Winget uninstall"
-                }
+            else
+            {
+                $null = $packagesLocal.add($package.local,$package.args)
+                Write-Host "Queueing $($package.local) for Local uninstall"
             }
+            # if ($ChocoPreference) {
+            #     if ($package.choco -eq "na") {
+            #         $packagesWinget.add($package.winget)
+            #         Write-Host "Queueing $($package.winget) for Winget uninstall"
+            #     } else {
+            #         $null = $packagesChoco.add($package.choco)
+            #         Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
+            #     }
+            # }
+            # else {
+            #     if ($package.winget -eq "na") {
+            #         $packagesChoco.add($package.choco)
+            #         Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
+            #     } else {
+            #         $null = $packagesWinget.add($($package.winget))
+            #         Write-Host "Queueing $($package.winget) for Winget uninstall"
+            #     }
+            # }
         }
-        return $packagesWinget, $packagesChoco
+        return $packagesWinget, $packagesChoco, $packagesLocal
         }.Invoke($PackagesToInstall)
 
         try {
             $sync.ProcessRunning = $true
 
             # Install all selected programs in new window
+            if($packagesLocal.Count -gt 0)
+            {
+                Install-WinUtilProgramLocal -Action Uninstall -Programs $packagesLocal
+            }
             if($packagesWinget.Count -gt 0) {
                 Install-WinUtilProgramWinget -Action Uninstall -Programs $packagesWinget
             }
