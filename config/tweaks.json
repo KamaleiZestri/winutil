@@ -1,4 +1,61 @@
 {
+  "WPFRestartPrintSpooler":
+  {
+    "Content": "Restart Print Spooler",
+    "Description": "Clears print queue and restarts print spooler.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript":[
+      "
+      Stop-Service -Name Spooler
+	    Remove-Item -Path \"$env:SystemRoot\\System32\\spool\\PRINTERS\\*.*\"
+	    Start-Service -Name Spooler
+      "
+    ]
+  },
+  "WPFTweaksAppDefaults":
+  {
+    "Content": "Set App Defaults",
+    "Description": "Set default apps according to res/AppDefaults.xml",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript":[
+      "dism /online /Import-DefaultAppAssociations:res\\AppDefaults.xml"
+    ],
+    "UndoScript":[
+      "dism /online /Remove-DefaultAppAssociations"
+    ]
+  },
+  "WPFTweaksStayOnLidClose":
+  {
+    "Content": "Stay on while lid is closed",
+    "Description": "Device stays on while lid is closed as long as device is plugged in.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript":[
+      "powercfg -setacvalueindex SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 0"
+    ],
+    "UndoScript":[
+      "powercfg -setacvalueindex SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 1"
+    ]
+  },
+  "WPFTweaksAddPrinterSearch" :
+  {
+    "Content": "Add Printer Search to Desktop",
+    "Description" : "Adds a shortcut to automatically search for campus-local printers to device.",
+    "category" : "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript": [
+      "Install-WinUtilPrinterSearch -install $true"
+    ],
+    "UndoScript": [
+      "Install-WinUtilPrinterSearch -install $false"
+    ]
+  },
   "WPFTweaksCleanUserProfiles" :
   {
     "Content": "Install CleanUserProfiles",
@@ -7,14 +64,10 @@
     "panel": "1",
     "Order": "a005_",
     "InvokeScript":[
-      "
-        Install-WinUtilCleanUserProfiles -install $true
-      "
+      "Install-WinUtilCleanUserProfiles -install $true"
     ],
     "UndoScript":[
-      "
-        Install-WinUtilCleanUserProfiles -install $false
-      "
+      "Install-WinUtilCleanUserProfiles -install $false"
     ],
     "link": "https://github.com/KamaleiZestri/CleanUserProfiles"
   },
