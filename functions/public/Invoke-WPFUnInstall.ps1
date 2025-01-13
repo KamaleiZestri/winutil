@@ -29,6 +29,7 @@ function Invoke-WPFUnInstall {
 
     if($confirm -eq "No") {return}
     $ChocoPreference = $($sync.WPFpreferChocolatey.IsChecked)
+    $WingetPreference = $($sync.WPFpreferWinget.IsChecked)
 
     Invoke-WPFRunspace -ArgumentList @(("PackagesToInstall", $PackagesToInstall),("ChocoPreference", $ChocoPreference)) -DebugPreference $DebugPreference -ScriptBlock {
         param($PackagesToInstall, $ChocoPreference, $DebugPreference)
@@ -43,34 +44,50 @@ function Invoke-WPFUnInstall {
             $packagesLocal = [System.Collections.Hashtable]::new()
 
         foreach ($package in $PackagesToInstall) {
-            if ($package.local -eq "na")
-            {
-                $packagesWinget.add($package.winget)
-                Write-Host "Queueing $($package.winget) for Winget install"
+            if ($ChocoPreference) {
+                if ($package.choco -ne "na") {
+                    $null = $packagesChoco.add($package.choco)
+                    Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
+                }
+                elseif ($package.local -ne "na") {
+                    $null = $packagesLocal.add($package.local,$package.args)
+                    Write-Host "Queueing $($package.local) for Local uninstall"
+                }
+                else {
+                    $packagesWinget.add($package.winget)
+                    Write-Host "Queueing $($package.winget) for Winget uninstall"
+                }
             }
-            else
-            {
-                $null = $packagesLocal.add($package.local,$package.args)
-                Write-Host "Queueing $($package.local) for Local uninstall"
+            elseif ($WingetPreference) {
+                if ($package.winget -ne "na") {
+                    $packagesWinget.add($package.winget)
+                    Write-Host "Queueing $($package.winget) for Winget uninstall"
+                }
+                elseif ($package.local -ne "na") {
+                    $null = $packagesLocal.add($package.local,$package.args)
+                    Write-Host "Queueing $($package.local) for Local uninstall"
+                }
+                else {
+                    $null = $packagesChoco.add($package.choco)
+                    Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
+                }
             }
-            # if ($ChocoPreference) {
-            #     if ($package.choco -eq "na") {
-            #         $packagesWinget.add($package.winget)
-            #         Write-Host "Queueing $($package.winget) for Winget uninstall"
-            #     } else {
-            #         $null = $packagesChoco.add($package.choco)
-            #         Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
-            #     }
-            # }
-            # else {
-            #     if ($package.winget -eq "na") {
-            #         $packagesChoco.add($package.choco)
-            #         Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
-            #     } else {
-            #         $null = $packagesWinget.add($($package.winget))
-            #         Write-Host "Queueing $($package.winget) for Winget uninstall"
-            #     }
-            # }
+            else {
+                if ($package.local -ne "na") {
+                    $null = $packagesLocal.add($package.local,$package.args)
+                    Write-Host "Queueing $($package.local) for Local uninstall"
+                }
+                elseif ($package.winget -ne "na") {
+
+                    $packagesWinget.add($package.winget)
+                    Write-Host "Queueing $($package.winget) for Winget uninstall"
+                }
+                else {
+                    $null = $packagesChoco.add($package.choco)
+                    Write-Host "Queueing $($package.choco) for Chocolatey uninstall"
+                }
+            }
+        }
         }
         return $packagesWinget, $packagesChoco, $packagesLocal
         }.Invoke($PackagesToInstall)

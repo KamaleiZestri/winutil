@@ -121,12 +121,19 @@ Invoke-WPFUIElements -configVariable $sync.configs.feature -targetGridName "feat
 
 $xaml.SelectNodes("//*[@Name]") | ForEach-Object {$sync["$("$($psitem.Name)")"] = $sync["Form"].FindName($psitem.Name)}
 
-#Persist the Chocolatey preference across winutil restarts
-$ChocoPreferencePath = "$env:LOCALAPPDATA\winutil\preferChocolatey.ini"
+#Persist the Chocolatey and Winget preferences across winutil restarts
+$ChocoPreferencePath = "res\preferChocolatey.ini"
 $sync.WPFpreferChocolatey.Add_Checked({New-Item -Path $ChocoPreferencePath -Force })
 $sync.WPFpreferChocolatey.Add_Unchecked({Remove-Item $ChocoPreferencePath -Force})
 if (Test-Path $ChocoPreferencePath) {
     $sync.WPFpreferChocolatey.IsChecked = $true
+}
+
+$WingetPreferencePath = "res\preferWinget.ini"
+$sync.WPFpreferWinget.Add_Checked({New-Item -Path $WingetPreferencePath -Force })
+$sync.WPFpreferWinget.Add_Unchecked({Remove-Item $WingetPreferencePath -Force})
+if (Test-Path $WingetPreferencePath) {
+    $sync.WPFpreferWinget.IsChecked = $true
 }
 
 $sync.keys | ForEach-Object {
@@ -417,8 +424,8 @@ $sync["SearchBar"].Add_TextChanged({
     $textToSearch = $sync.SearchBar.Text.ToLower()
 
     foreach ($CheckBox in $CheckBoxes) {
-        # Skip if the checkbox is null, it doesn't have content or it is the prefer Choco checkbox
-        if ($CheckBox -eq $null -or $CheckBox.Value -eq $null -or $CheckBox.Value.Content -eq $null -or $CheckBox.Name -eq "WPFpreferChocolatey") {
+        # Skip if the checkbox is null, it doesn't have content or it is the prefer Choco or prefer Winget checkbox
+        if ($CheckBox -eq $null -or $CheckBox.Value -eq $null -or $CheckBox.Value.Content -eq $null -or $CheckBox.Name -eq "WPFpreferChocolatey" -or $CheckBox.Name -eq "WPFpreferWinget") {
             continue
         }
 
@@ -468,20 +475,7 @@ $sync["Form"].Add_Loaded({
 $NavLogoPanel = $sync["Form"].FindName("NavLogoPanel")
 $NavLogoPanel.Children.Add((Invoke-WinUtilAssets -Type "logo" -Size 25)) | Out-Null
 
-# Initialize the hashtable
-$winutildir = @{}
-
-# Set the path for the winutil directory
-$winutildir["path"] = "$env:LOCALAPPDATA\winutil\"
-[System.IO.Directory]::CreateDirectory($winutildir["path"]) | Out-Null
-
-$winutildir["logo.ico"] = $winutildir["path"] + "cttlogo.ico"
-
-if (Test-Path $winutildir["logo.ico"]) {
-    $sync["logorender"] = $winutildir["logo.ico"]
-} else {
-    $sync["logorender"] = (Invoke-WinUtilAssets -Type "Logo" -Size 90 -Render)
-}
+$sync["logorender"] = (Invoke-WinUtilAssets -Type "Logo" -Size 90 -Render)
 $sync["checkmarkrender"] = (Invoke-WinUtilAssets -Type "checkmark" -Size 512 -Render)
 $sync["warningrender"] = (Invoke-WinUtilAssets -Type "warning" -Size 512 -Render)
 
