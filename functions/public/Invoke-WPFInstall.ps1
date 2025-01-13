@@ -20,6 +20,7 @@ function Invoke-WPFInstall {
         return
     }
     $ChocoPreference = $($sync.WPFpreferChocolatey.IsChecked)
+    $WingetPreference = $($sync.WPFpreferWinget.IsChecked)
     $installHandle = Invoke-WPFRunspace -ParameterList @(("PackagesToInstall", $PackagesToInstall),("ChocoPreference", $ChocoPreference)) -DebugPreference $DebugPreference -ScriptBlock {
         param($PackagesToInstall, $ChocoPreference, $DebugPreference)
         if ($PackagesToInstall.count -eq 1) {
@@ -33,35 +34,57 @@ function Invoke-WPFInstall {
             $packagesLocal = [System.Collections.Hashtable]::new()
 
             foreach ($package in $PackagesToInstall) {
-                if ($package.local -eq "na")
-                {
-                    $packagesWinget.add($package.winget)
-                    Write-Host "Queueing $($package.winget) for Winget install"
+                if ($ChocoPreference) {
+                    if ($package.choco -ne "na")
+                    {
+                        $null = $packagesChoco.add($package.choco)
+                        Write-Host "Queueing $($package.choco) for Chocolatey install"
+                    }
+                    elseif($package.local -ne "na")
+                    {
+                        $packagesLocal.add($package.local,$package.args)
+                        Write-Host "Queueing $($package.local) for Local install"
+                    }
+                    else
+                    {
+                        $packagesWinget.add($package.winget)
+                        Write-Host "Queueing $($package.winget) for Winget install"
+                    }
                 }
-                else
-                {
-                    $packagesLocal.add($package.local,$package.args)
+                if ($WingetPreference) {
+                    if ($package.winget -ne "na")
+                    {
+                        $packagesWinget.add($package.winget)
+                        Write-Host "Queueing $($package.winget) for Winget install"
+                    }
+                    elseif($package.local -ne "na")
+                    {
+                        $packagesLocal.add($package.local,$package.args)
+                        Write-Host "Queueing $($package.local) for Local install"
+                    }
+                    else
+                    {
+                        $null = $packagesChoco.add($package.choco)
+                        Write-Host "Queueing $($package.choco) for Chocolatey install"
+                    }
+                }
+                else {
+                    if ($package.local -ne "na")
+                    {
+                        $packagesLocal.add($package.local,$package.args)
                     Write-Host "Queueing $($package.local) for Local install"
-                }
+                    }
+                    elseif($package.winget -ne "na")
+                    {
 
-            # if ($ChocoPreference) {
-            #     if ($package.choco -eq "na") {
-            #         $packagesWinget.add($package.winget)
-            #         Write-Host "Queueing $($package.winget) for Winget install"
-            #     } else {
-            #         $null = $packagesChoco.add($package.choco)
-            #         Write-Host "Queueing $($package.choco) for Chocolatey install"
-            #     }
-            # }
-            # else {
-            #     if ($package.winget -eq "na") {
-            #         $packagesChoco.add($package.choco)
-            #         Write-Host "Queueing $($package.choco) for Chocolatey install"
-            #     } else {
-            #         $null = $packagesWinget.add($($package.winget))
-            #         Write-Host "Queueing $($package.winget) for Winget install"
-            #     }
-            # }
+                        $packagesWinget.add($package.winget)
+                        Write-Host "Queueing $($package.winget) for Winget install"
+                    }
+                    else {
+                    $null = $packagesChoco.add($package.choco)
+                    Write-Host "Queueing $($package.choco) for Chocolatey install"
+                }
+            }
         }
         return $packagesWinget, $packagesChoco, $packagesLocal
         }.Invoke($PackagesToInstall)
@@ -75,16 +98,15 @@ function Invoke-WPFInstall {
                 Install-WinUtilProgramLocal -Action Install -Programs $packagesLocal
             }
 
-            #TODO temporary no winget...
-            # if($packagesWinget.Count -gt 0) {
-            #     Install-WinUtilWinget
-            #     Install-WinUtilProgramWinget -Action Install -Programs $packagesWinget
+            if($packagesWinget.Count -gt 0) {
+                Install-WinUtilWinget
+                Install-WinUtilProgramWinget -Action Install -Programs $packagesWinget
 
-            # }
-            # if($packagesChoco.Count -gt 0) {
-            #     Install-WinUtilChoco
-            #     Install-WinUtilProgramChoco -Action Install -Programs $packagesChoco
-            # }
+            }
+            if($packagesChoco.Count -gt 0) {
+                Install-WinUtilChoco
+                Install-WinUtilProgramChoco -Action Install -Programs $packagesChoco
+            }
             Write-Host "==========================================="
             Write-Host "--      Installs have finished          ---"
             Write-Host "==========================================="
