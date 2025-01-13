@@ -4,7 +4,9 @@ Please see [here](https://github.com/ChrisTitusTech/winutil) for information on 
 
 Changes here include:
 - Remove Microwin
+- Remove Powershell Profile.
 - Change logs location to same directory as winutil
+- Localize preferences to res folder
 - Add "BlockUserApps" as a Tweak
 - Add installation of [CleanUserProfiles](https://github.com/KamaleiZestri/CleanUserProfiles) as a Tweak
 - Added option to install locally via MSIs and exes. Set this local install to default.
@@ -14,3 +16,4 @@ Changes here include:
 - Add "Install Printer Search" tweak.
 - Add "Install app defaults" tweak.
 - Add "Restart Print Spooler" tweak.
+- Add "Prefer Winget" option alongisde "Prefer Choclatey"
