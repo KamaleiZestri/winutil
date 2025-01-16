@@ -1,4 +1,12 @@
 {
+  "WPFCleanUserProfilesButton": {
+    "Content": "Run Clean User Profiles",
+    "category": "z__Advanced Tweaks - CAUTION",
+    "panel": "1",
+    "Order": "a039_",
+    "Type": "Button",
+    "link": ""
+  },
   "WPFRestartPrintSpooler":
   {
     "Content": "Restart Print Spooler",
@@ -9,8 +17,8 @@
     "InvokeScript":[
       "
       Stop-Service -Name Spooler
-	    Remove-Item -Path \"$env:SystemRoot\\System32\\spool\\PRINTERS\\*.*\"
-	    Start-Service -Name Spooler
+      Remove-Item -Path \"$env:SystemRoot\\System32\\spool\\PRINTERS\\*.*\"
+      Start-Service -Name Spooler
       "
     ]
   },
