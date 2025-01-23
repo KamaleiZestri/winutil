@@ -18,3 +18,4 @@ Changes here include:
 - Add "Install app defaults" tweak.
 - Add "Restart Print Spooler" tweak.
 - Add "Prefer Winget" option alongisde "Prefer Choclatey"
+- Add "Disable News and Interest" tweak.

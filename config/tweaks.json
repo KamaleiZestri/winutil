@@ -1,4 +1,21 @@
 {
+  "WPFTweaksDisableNews": {
+    "Content": "Disable News and Interest in Taskbar",
+    "Description": "Disables News and Interest app.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds",
+        "Name": "EnableFeeds",
+        "Value": "0",
+        "OriginalValue": "1",
+        "Type": "DWord"
+      }
+    ],
+    "link": ""
+  },
   "WPFCleanUserProfilesButton": {
     "Content": "Run Clean User Profiles",
     "category": "z__Advanced Tweaks - CAUTION",
