@@ -2,6 +2,7 @@
 
 # Configuration folder
 .vscode/
+.idea/
 
 ### Visual Studio ###
 
@@ -46,7 +47,9 @@ True
 test.ps1
 winutil.ps1
 
-binary/
 
-res/
-logs/
+
+# temporary excludes for docs
+.github/site/
+
+binary/
