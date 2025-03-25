@@ -48,7 +48,8 @@ test.ps1
 winutil.ps1
 
 
-
+res/
+logs/
 # temporary excludes for docs
 .github/site/
 
