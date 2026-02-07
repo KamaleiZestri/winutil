@@ -80,7 +80,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 $dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 
 # Set the path for the winutil directory
-$winutildir = "$env:LocalAppData\winutil"
+$winutildir = "\res"
 New-Item $winutildir -ItemType Directory -Force | Out-Null
 
 $logdir = "$winutildir\logs"
