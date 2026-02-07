@@ -89,8 +89,9 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 
 $dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 
+
 # Set the path for the winutil directory
-$winutildir = "\res"
+$winutildir = "$PSScriptRoot\res"
 New-Item $winutildir -ItemType Directory -Force | Out-Null
 
 # TODO move config loading here? or to start of main?
