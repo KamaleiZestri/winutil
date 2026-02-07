@@ -5,3 +5,10 @@ Please see [here](https://github.com/ChrisTitusTech/winutil) for information on 
 Changes here include:
 - Removals
    - Remove Microwin
+   - Remove powershell profile
+
+- Changes
+   - Change winutildir to local res
+
+- Additions
+   - Unify file storage to same variable.
