@@ -5,3 +5,9 @@ Please see [here](https://github.com/ChrisTitusTech/winutil) for information on 
 Changes here include:
 - Removals
    - Remove Microwin
+
+- Changes
+   -
+
+- Additions
+   - Unify file storage to same variable.
