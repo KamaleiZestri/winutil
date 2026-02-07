@@ -7,7 +7,7 @@ Changes here include:
    - Remove Microwin
 
 - Changes
-   -
+   - Change winutildir to local res 
 
 - Additions
    - Unify file storage to same variable.
