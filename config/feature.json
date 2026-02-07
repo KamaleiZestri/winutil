@@ -270,24 +270,6 @@
     "ButtonWidth": "300",
     "link": "https://winutil.christitus.com/dev/features/legacy-windows-panels/timedate"
   },
-  "WPFWinUtilInstallPSProfile": {
-    "Content": "Install CTT PowerShell Profile",
-    "category": "Powershell Profile Powershell 7+ Only",
-    "panel": "2",
-    "Order": "a083_",
-    "Type": "Button",
-    "ButtonWidth": "300",
-    "link": "https://winutil.christitus.com/dev/features/powershell-profile-powershell-7--only/installpsprofile"
-  },
-  "WPFWinUtilUninstallPSProfile": {
-    "Content": "Uninstall CTT PowerShell Profile",
-    "category": "Powershell Profile Powershell 7+ Only",
-    "panel": "2",
-    "Order": "a084_",
-    "Type": "Button",
-    "ButtonWidth": "300",
-    "link": "https://winutil.christitus.com/dev/features/powershell-profile-powershell-7--only/uninstallpsprofile"
-  },
   "WPFWinUtilSSHServer": {
     "Content": "Enable OpenSSH Server",
     "category": "Remote Access",
