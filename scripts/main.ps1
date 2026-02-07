@@ -386,27 +386,6 @@ $sync["Form"].Add_ContentRendered({
 
 })
 
-# Add event handlers for the RadioButtons
-$sync["ISOdownloader"].add_Checked({
-    $sync["ISOLanguage"].Visibility = [System.Windows.Visibility]::Visible
-})
-
-$sync["ISOmanual"].add_Checked({
-    $sync["ISOLanguage"].Visibility = [System.Windows.Visibility]::Collapsed
-})
-
-$sync["ISOLanguage"].Items.Add("System Language ($(Microwin-GetLangFromCulture -langName $((Get-Culture).Name)))") | Out-Null
-if ($currentCulture -ne "English International") {
-    $sync["ISOLanguage"].Items.Add("English International") | Out-Null
-}
-if ($currentCulture -ne "English") {
-    $sync["ISOLanguage"].Items.Add("English") | Out-Null
-}
-if ($sync["ISOLanguage"].Items.Count -eq 1) {
-    $sync["ISOLanguage"].IsEnabled = $false
-}
-$sync["ISOLanguage"].SelectedIndex = 0
-
 # The SearchBarTimer is used to delay the search operation until the user has stopped typing for a short period
 # This prevents the ui from stuttering when the user types quickly as it dosnt need to update the ui for every keystroke
 
