@@ -28,6 +28,7 @@ function Invoke-WPFInstall {
 
         $packagesWinget = $packagesSorted[[PackageManagers]::Winget]
         $packagesChoco = $packagesSorted[[PackageManagers]::Choco]
+        $packagesLocal = $packagesSorted[[PackageManagers]::Local]
 
         try {
             $sync.ProcessRunning = $true
@@ -39,6 +40,10 @@ function Invoke-WPFInstall {
             if($packagesChoco.Count -gt 0) {
                 Install-WinUtilChoco
                 Install-WinUtilProgramChoco -Action Install -Programs $packagesChoco
+            }
+            if($packagesLocal.Count -gt 0) {
+                Show-WPFInstallAppBusy -text "Installing apps..."
+                Install-WinUtilProgramLocal -Action Install -Programs $packagesLocal
             }
             Hide-WPFInstallAppBusy
             Write-Host "==========================================="

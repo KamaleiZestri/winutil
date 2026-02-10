@@ -38,6 +38,7 @@ function Invoke-WPFUnInstall {
         $packagesSorted = Get-WinUtilSelectedPackages -PackageList $PackagesToUninstall -Preference $ManagerPreference
         $packagesWinget = $packagesSorted[[PackageManagers]::Winget]
         $packagesChoco = $packagesSorted[[PackageManagers]::Choco]
+        $packagesLocal = $packagesSorted[[PackageManagers]::Local]
 
         try {
             $sync.ProcessRunning = $true
@@ -49,6 +50,9 @@ function Invoke-WPFUnInstall {
             }
             if($packagesChoco.Count -gt 0) {
                 Install-WinUtilProgramChoco -Action Uninstall -Programs $packagesChoco
+            }
+            if($packagesLocal.Count -gt 0) {
+                Install-WinUtilProgramLocal -Action Uninstall -Programs $packagesLocal
             }
             Hide-WPFInstallAppBusy
             Write-Host "==========================================="
