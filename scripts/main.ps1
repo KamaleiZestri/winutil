@@ -3,7 +3,8 @@ Add-Type @"
 public enum PackageManagers
 {
     Winget,
-    Choco
+    Choco,
+    Local
 }
 "@
 
@@ -144,11 +145,13 @@ $xaml.SelectNodes("//*[@Name]") | ForEach-Object {$sync["$("$($psitem.Name)")"] 
 #Persist Package Manager preference across winutil restarts
 $sync.ChocoRadioButton.Add_Checked({Set-PackageManagerPreference Choco})
 $sync.WingetRadioButton.Add_Checked({Set-PackageManagerPreference Winget})
+$sync.LocalRadioButton.Add_Checked({Set-PackageManagerPreference Local})
 Set-PackageManagerPreference
 
 switch ($sync["ManagerPreference"]) {
     "Choco" {$sync.ChocoRadioButton.IsChecked = $true; break}
     "Winget" {$sync.WingetRadioButton.IsChecked = $true; break}
+    "Local" {$sync.LocalRadioButton.IsChecked = $true; break}
 }
 
 $sync.keys | ForEach-Object {
