@@ -23,8 +23,10 @@ function Get-WinUtilSelectedPackages
     $packages = [System.Collections.Hashtable]::new()
     $packagesWinget = [System.Collections.ArrayList]::new()
     $packagesChoco = [System.Collections.ArrayList]::new()
+    $packagesLocal = [System.Collections.ArrayList]::new()
     $packages[[PackageManagers]::Winget] = $packagesWinget
     $packages[[PackageManagers]::Choco] = $packagesChoco
+    $packages[[PackageManagers]::Local] = $packagesLocal
 
     Write-Debug "Checking packages using Preference '$($Preference)'"
 
@@ -49,6 +51,18 @@ function Get-WinUtilSelectedPackages
                 } else {
                     $null = $packagesWinget.add($($package.winget))
                     Write-Host "Queueing $($package.winget) for Winget"
+                }
+                break
+            }
+            "Local" {
+                if ($package.local -eq "na")
+                {
+                    Write-Debug "$($package.content) has no Local value."
+                    $null = $packagesWinget.add($($package.winget))
+                    Write-Host "Queueing $($package.winget) for Winget"
+                } else {
+                    $null = $packagesLocal.add(@($package.local, $package.args))
+                    Write-Host "Queueing $($package.local) for Local"
                 }
                 break
             }

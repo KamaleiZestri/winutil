@@ -4,7 +4,6 @@ Please see [here](https://github.com/ChrisTitusTech/winutil) for information on 
 
 Changes here include:
 - Removals
-   - Remove Microwin
    - Remove powershell profile
 
 - Changes
@@ -12,3 +11,4 @@ Changes here include:
 
 - Additions
    - Unify file storage to same variable.
+   - Add option to install local programs (both MSI and EXE) with additional arguments.
