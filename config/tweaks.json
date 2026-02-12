@@ -41,6 +41,19 @@
       "powercfg -setacvalueindex SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 1"
     ]
   },
+  "WPFTweaksAddPrinterSearch": {
+    "Content": "Add Printer Search to Desktop",
+    "Description": "Adds a shortcut to automatically search for campus-local printers to device.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript": [
+      "Install-WinUtilPrinterSearch -install $true"
+    ],
+    "UndoScript": [
+      "Install-WinUtilPrinterSearch -install $false"
+    ]
+  },
   "WPFTweaksCleanUserProfiles": {
     "Content": "Install CleanUserProfiles",
     "Description": "Automatically delete user profiles on restart. Works on shutdown too if hibernation is off.",
@@ -54,6 +67,26 @@
       "Install-WinUtilCleanUserProfiles -install $false"
     ],
     "link": "https://github.com/KamaleiZestri/CleanUserProfiles"
+  },
+  "WPFTweaksBlockApps": {
+    "Content": "Block User Apps",
+    "Description": "Block Users from running non-installed apps.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "service": [
+      {
+        "Name": "AppIDSvc",
+        "StartupType": "Automatic",
+        "OriginalType": "Disabled"
+      }
+    ],
+    "InvokeScript": [
+      "\r\n      net start \"AppIDSvc\"\r\n      Set-AppLockerPolicy -XMLPolicy res/AppsPolicy.xml\r\n      "
+    ],
+    "UndoScript": [
+      "\r\n      net stop \"AppIDSvc\"\r\n      Set-AppLockerPolicy -XMLPolicy res/ClearAppsPolicy.xml\r\n      "
+    ]
   },
   "WPFTweaksActivity": {
     "Content": "Disable Activity History",
