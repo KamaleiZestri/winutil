@@ -15,6 +15,32 @@
     "Order": "a039_",
     "Type": "Button"
   },
+  "WPFTweaksAppDefaults": {
+    "Content": "Set App Defaults",
+    "Description": "Set default apps according to res/AppDefaults.xml",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript": [
+      "dism /online /Import-DefaultAppAssociations:res\\AppDefaults.xml"
+    ],
+    "UndoScript": [
+      "dism /online /Remove-DefaultAppAssociations"
+    ]
+  },
+  "WPFTweaksStayOnLidClose": {
+    "Content": "Stay on while lid is closed",
+    "Description": "Device stays on while lid is closed as long as device is plugged in.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript": [
+      "powercfg -setacvalueindex SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 0"
+    ],
+    "UndoScript": [
+      "powercfg -setacvalueindex SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 1"
+    ]
+  },
   "WPFTweaksCleanUserProfiles": {
     "Content": "Install CleanUserProfiles",
     "Description": "Automatically delete user profiles on restart. Works on shutdown too if hibernation is off.",
