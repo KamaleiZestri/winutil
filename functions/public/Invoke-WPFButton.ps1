@@ -63,5 +63,6 @@ function Invoke-WPFButton {
         "WPFWinUtilUninstallPSProfile" {Invoke-WinUtilUninstallPSProfile}
         "WPFWinUtilSSHServer" {Invoke-WPFSSHServer}
         "WPFselectedAppsButton" {$sync.selectedAppsPopup.IsOpen = -not $sync.selectedAppsPopup.IsOpen}
+        "WPFCleanUserProfilesButton" {Invoke-CleanseUserProfilesButton}
     }
 }
