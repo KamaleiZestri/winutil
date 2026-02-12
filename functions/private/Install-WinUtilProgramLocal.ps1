@@ -1,6 +1,6 @@
 function Install-WinUtilProgramLocal
 {
-      <#
+    <#
     .SYNOPSIS
     Attempt to install the provided programs.
 
@@ -19,59 +19,11 @@ function Install-WinUtilProgramLocal
         [String]$Action
     )
 
-    Function Invoke-MSI
-    {
-         <#
-        .SYNOPSIS
-        Actually runs the MSI for installing the program
-
-        .PARAMETER program
-        The full path to the program that should be installed
-
-        .PARAMETER arguments
-        Extra arguments to include when running the installer.
-        #>
-        param (
-            [string]$program,
-            [string]$arguments
-        )
-
-        if ($Action -eq "Install")
-        {
-            $fullArgs = "/quiet /norestart $arguments /i $program"
-        }
-        else
-        {
-            $fullArgs = "/quiet /norestart /x $program"
-        }
-
-        $processParams =
-        @{
-            FilePath = "msiexec"
-            ArgumentList = $fullArgs
-            Wait = $true
-            PassThru = $true
-            NoNewWindow = $true
-        }
-
-        return (Start-Process @processParams).ExitCode
-    }
-    Function Invoke-Exe
+    Function Invoke-Install
     {
         <#
         .SYNOPSIS
-        Actually runs the MSI for installing the program
-
-        .PARAMETER program
-        The full path to the program that should be installed
-
-        .PARAMETER arguments
-        Extra arguments to include when running the installer.
-        #>
-
-         <#
-        .SYNOPSIS
-        Actually runs the MSI for installing the program
+        Contains the Install Logic and return code handling from winget
 
         .PARAMETER program
         The full path to the program that should be installed
@@ -93,44 +45,19 @@ function Install-WinUtilProgramLocal
             NoNewWindow = $true
         }
 
-
-
-        return (Start-Process @processParams).ExitCode
-    }
-    Function Invoke-Install
-    {
-        <#
-        .SYNOPSIS
-        Contains the Install Logic and return code handling from winget
-
-        .PARAMETER program
-        The full path to the program that should be installed
-
-        .PARAMETER arguments
-        Extra arguments to include when running the installer.
-        #>
-        param (
-            [string]$program,
-            [string]$arguments
-        )
-            $extension = $program.Split(".")[-1];
-            # TODO actually check status for error during install
-            if($extension -eq "msi")
-            {
-                $status = Invoke-MSI $program $arguments
-            }
-            elseif ($extension -eq "exe")
-            {
-                $status = Invoke-EXE $program $arguments
-            }
-            else
-            {
-                Write-Host "$($program) has an unknown extension."
-                return $false
-            }
-
+        $status = (Start-Process @processParams).ExitCode
+        
+        if ($status == 0)
+        {
             Write-Host "$($program) installed successfully."
             return $true
+        }
+        else 
+        {
+            Write-Host "$($program) did not install properly."
+            Write-Host "Exit Status: $status"
+            return $false
+        }         
     }
 
     Function Invoke-Uninstall
@@ -147,26 +74,30 @@ function Install-WinUtilProgramLocal
             [string]$program
         )
 
-        $extension = $program.Split(".")[-1];
-        # TODO actually check status for error during uninstall
-        if($extension -eq "msi")
-        {
-            $status = Invoke-MSI $program
-        }
-        elseif ($extension -eq "exe")
-        {
-            # TODO maybe attempt winget uninstall?
-            Write-Host "Cannot uninstall '$program' because it is a .exe file."
-            return $false
-        }
-        else
-        {
-            Write-Host "$($program) has an unknown extension."
-            return $false
-        }
-
-        Write-Host "$($program) uninstalled successfully."
+        #TODO look into uninstall.
+        Write-Host "Local uninstall not implemented yet..."
         return $true
+
+        # $extension = $program.Split(".")[-1];
+        # # TODO actually check status for error during uninstall
+        # if($extension -eq "msi")
+        # {
+        #     $status = Invoke-MSI $program
+        # }
+        # elseif ($extension -eq "exe")
+        # {
+        #     # TODO maybe attempt winget uninstall?
+        #     Write-Host "Cannot uninstall '$program' because it is a .exe file."
+        #     return $false
+        # }
+        # else
+        # {
+        #     Write-Host "$($program) has an unknown extension."
+        #     return $false
+        # }
+
+        # Write-Host "$($program) uninstalled successfully."
+        # return $true
     }
 
     $count = $Programs.Count
