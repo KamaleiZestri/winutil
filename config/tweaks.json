@@ -7,6 +7,14 @@
     "Type": "Button",
     "link": ""
   },
+  "WPFRestartPrintSpooler": {
+    "Content": "Restart Print Spooler",
+    "Description": "Clears print queue and restarts print spooler.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a039_",
+    "Type": "Button"
+  },
   "WPFTweaksCleanUserProfiles": {
     "Content": "Install CleanUserProfiles",
     "Description": "Automatically delete user profiles on restart. Works on shutdown too if hibernation is off.",
