@@ -13,6 +13,29 @@
     "panel": "1",
     "Type": "Button"
   },
+  "WPFTweaksPowerOptions": {
+    "Content": "Set Power Options",
+    "Description": "Set default power options to Battery Display: 1 hour, BatterySleep: 2 hour, Plugin Display 1 hour, PluginSleep 3 hours",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "link": "https://ss64.com/nt/powercfg.html",
+    "InvokeScript": [
+      "
+      powercfg /change monitor-timeout-dc 60
+      powercfg /change standby-timeout-dc 120
+      powercfg /change monitor-timeout-ac 60
+      powercfg /change standby-timeout-ac 180
+      "
+    ],
+    "UndoScript": [
+      "
+      powercfg /change monitor-timeout-dc 3
+      powercfg /change standby-timeout-dc 5
+      powercfg /change monitor-timeout-ac 10
+      powercfg /change standby-timeout-ac 15
+      "
+    ]
+  },
   "WPFTweaksAppDefaults": {
     "Content": "Set App Defaults",
     "Description": "Set default apps according to res/AppDefaults.xml",
