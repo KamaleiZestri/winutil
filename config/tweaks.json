@@ -1,4 +1,18 @@
 {
+  "WPFTweaksArbitraryFiles": {
+    "Content": "Install arbitray files",
+    "Description": "Install files from /res/arb into default desktop.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "InvokeScript": [
+      "
+      Get-ChildItem 'res\\arb' | ForEach-Object {
+        Copy-Item $psitem.FullName -Destination 'C:\\Users\\Default\\Desktop'
+      }
+      "
+    ],
+    "link": ""
+  },
   "WPFCleanUserProfilesButton": {
     "Content": "Run Clean User Profiles",
     "category": "z__Advanced Tweaks - CAUTION",
