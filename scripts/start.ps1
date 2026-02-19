@@ -12,6 +12,14 @@ param (
     [switch]$Noui
 )
 
+# Set DebugPreference based on the -Debug switch
+if ($Debug) {
+    $DebugPreference = "Continue"
+}
+else {
+    $DebugPreference = "SilentlyContinue"
+}
+
 if ($Config) {
     $PARAM_CONFIG = $Config
 }
@@ -84,6 +92,8 @@ $dateTime = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 # Set the path for the winutil directory
 $winutildir = "$env:LocalAppData\winutil"
 New-Item $winutildir -ItemType Directory -Force | Out-Null
+
+# TODO move config loading here? or to start of main?
 
 $logdir = "$winutildir\logs"
 New-Item $logdir -ItemType Directory -Force | Out-Null
