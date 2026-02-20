@@ -176,11 +176,12 @@ function Install-WinUtilProgramLocal
     Write-Host "--    Configuring local packages       ---"
     Write-Host "==========================================="
 
-    foreach ($program in $Programs.GetEnumerator())
-    {
+   for ($i = 0; $i -lt $count; $i++)
+   {
+        $Program = $Programs[$i]
         $result = $false
         Set-WinUtilProgressBar -label "$Action $($program[0])" -percent ($i / $count * 100)
-        $sync.form.Dispatcher.Invoke([action]{ Set-WinUtilTaskbaritem -value ($i / $count)})
+        Invoke-WPFUIThread -ScriptBlock { Set-WinUtilTaskbaritem -value ($i / $count)}
 
         $result = switch ($Action) {
             "Install" {Invoke-Install -program $program[0] -arguments $program[1]}
