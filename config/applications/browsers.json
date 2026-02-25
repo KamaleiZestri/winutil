@@ -1,0 +1,152 @@
+{
+   "brave": {
+      "category": "Browsers",
+      "choco": "brave",
+      "content": "Brave",
+      "description": "Brave is a privacy-focused web browser that blocks ads and trackers, offering a faster and safer browsing experience.",
+      "link": "https://www.brave.com",
+      "winget": "Brave.Brave",
+      "foss": true
+   },
+   "chrome": {
+      "category": "Browsers",
+      "choco": "googlechrome",
+      "content": "Chrome",
+      "description": "Google Chrome is a widely used web browser known for its speed, simplicity, and seamless integration with Google services.",
+      "link": "https://www.google.com/chrome/",
+      "winget": "Google.Chrome"
+   },
+   "chromium": {
+      "category": "Browsers",
+      "choco": "chromium",
+      "content": "Chromium",
+      "description": "Chromium is the open-source project that serves as the foundation for various web browsers, including Chrome.",
+      "link": "https://github.com/Hibbiki/chromium-win64",
+      "winget": "Hibbiki.Chromium",
+      "foss": true
+   },
+   "edge": {
+      "category": "Browsers",
+      "choco": "microsoft-edge",
+      "content": "Edge",
+      "description": "Microsoft Edge is a modern web browser built on Chromium, offering performance, security, and integration with Microsoft services.",
+      "link": "https://www.microsoft.com/edge",
+      "winget": "Microsoft.Edge"
+   },
+   "falkon": {
+      "category": "Browsers",
+      "choco": "falkon",
+      "content": "Falkon",
+      "description": "Falkon is a lightweight and fast web browser with a focus on user privacy and efficiency.",
+      "link": "https://www.falkon.org/",
+      "winget": "KDE.Falkon",
+      "foss": true
+   },
+   "firefox": {
+      "category": "Browsers",
+      "choco": "firefox",
+      "content": "Firefox",
+      "description": "Mozilla Firefox is an open-source web browser known for its customization options, privacy features, and extensions.",
+      "link": "https://www.mozilla.org/en-US/firefox/new/",
+      "winget": "Mozilla.Firefox",
+      "foss": true
+   },
+   "firefoxesr": {
+      "category": "Browsers",
+      "choco": "FirefoxESR",
+      "content": "Firefox ESR",
+      "description": "Mozilla Firefox is an open-source web browser known for its customization options, privacy features, and extensions. Firefox ESR (Extended Support Release) receives major updates every 42 weeks with minor updates such as crash fixes, security fixes and policy updates as needed, but at least every four weeks.",
+      "link": "https://www.mozilla.org/en-US/firefox/enterprise/",
+      "winget": "Mozilla.Firefox.ESR",
+      "foss": true
+   },
+   "floorp": {
+      "category": "Browsers",
+      "choco": "na",
+      "content": "Floorp",
+      "description": "Floorp is an open-source web browser project that aims to provide a simple and fast browsing experience.",
+      "link": "https://floorp.app/",
+      "winget": "Ablaze.Floorp",
+      "foss": true
+   },
+   "librewolf": {
+      "category": "Browsers",
+      "choco": "librewolf",
+      "content": "LibreWolf",
+      "description": "LibreWolf is a privacy-focused web browser based on Firefox, with additional privacy and security enhancements.",
+      "link": "https://librewolf-community.gitlab.io/",
+      "winget": "LibreWolf.LibreWolf",
+      "foss": true
+   },
+   "mullvadbrowser": {
+      "category": "Browsers",
+      "choco": "na",
+      "content": "Mullvad Browser",
+      "description": "Mullvad Browser is a privacy-focused web browser, developed in partnership with the Tor Project.",
+      "link": "https://mullvad.net/browser",
+      "winget": "MullvadVPN.MullvadBrowser",
+      "foss": true
+   },
+   "thorium": {
+      "category": "Browsers",
+      "choco": "thorium",
+      "content": "Thorium Browser AVX2",
+      "description": "Browser built for speed over vanilla chromium. It is built with AVX2 optimizations and is the fastest browser on the market.",
+      "link": "https://thorium.rocks/",
+      "winget": "Alex313031.Thorium.AVX2",
+      "foss": true
+   },
+   "tor": {
+      "category": "Browsers",
+      "choco": "tor-browser",
+      "content": "Tor Browser",
+      "description": "Tor Browser is designed for anonymous web browsing, utilizing the Tor network to protect user privacy and security.",
+      "link": "https://www.torproject.org/",
+      "winget": "TorProject.TorBrowser",
+      "foss": true
+   },
+   "ungoogled": {
+      "category": "Browsers",
+      "choco": "ungoogled-chromium",
+      "content": "Ungoogled",
+      "description": "Ungoogled Chromium is a version of Chromium without Google's integration for enhanced privacy and control.",
+      "link": "https://github.com/Eloston/ungoogled-chromium",
+      "winget": "eloston.ungoogled-chromium",
+      "foss": true
+   },
+   "vivaldi": {
+      "category": "Browsers",
+      "choco": "vivaldi",
+      "content": "Vivaldi",
+      "description": "Vivaldi is a highly customizable web browser with a focus on user personalization and productivity features.",
+      "link": "https://vivaldi.com/",
+      "winget": "Vivaldi.Vivaldi"
+   },
+   "waterfox": {
+      "category": "Browsers",
+      "choco": "waterfox",
+      "content": "Waterfox",
+      "description": "Waterfox is a fast, privacy-focused web browser based on Firefox, designed to preserve user choice and privacy.",
+      "link": "https://www.waterfox.net/",
+      "winget": "Waterfox.Waterfox",
+      "foss": true
+   },
+   "PaleMoon": {
+      "category": "Browsers",
+      "choco": "paleMoon",
+      "content": "PaleMoon",
+      "description": "Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use.",
+      "link": "https://www.palemoon.org/download.shtml",
+      "winget": "MoonchildProductions.PaleMoon",
+      "foss": true
+   },
+   "ZenBrowser": {
+      "category": "Browsers",
+      "choco": "na",
+      "content": "Zen Browser",
+      "description": "The modern, privacy-focused, performance-driven browser built on Firefox",
+      "link": "https://zen-browser.app/",
+      "winget": "Zen-Team.Zen-Browser",
+      "foss": true
+   }
+}

@@ -1,0 +1,194 @@
+{
+   "beeper": {
+      "category": "Communications",
+      "choco": "na",
+      "content": "Beeper",
+      "description": "All your chats in one app",
+      "link": "https://www.beeper.com/",
+      "winget": "Beeper.Beeper"
+   },
+   "chatterino": {
+      "category": "Communications",
+      "choco": "chatterino",
+      "content": "Chatterino",
+      "description": "Chatterino is a chat client for Twitch chat that offers a clean and customizable interface for a better streaming experience.",
+      "link": "https://www.chatterino.com/",
+      "winget": "ChatterinoTeam.Chatterino",
+      "foss": true
+   },
+   "discord": {
+      "category": "Communications",
+      "choco": "discord",
+      "content": "Discord",
+      "description": "Discord is a popular communication platform with voice, video, and text chat, designed for gamers but used by a wide range of communities.",
+      "link": "https://discord.com/",
+      "winget": "Discord.Discord"
+   },
+   "ferdium": {
+      "category": "Communications",
+      "choco": "ferdium",
+      "content": "Ferdium",
+      "description": "Ferdium is a messaging application that combines multiple messaging services into a single app for easy management.",
+      "link": "https://ferdium.org/",
+      "winget": "Ferdium.Ferdium",
+      "foss": true
+   },
+   "hexchat": {
+      "category": "Communications",
+      "choco": "hexchat",
+      "content": "Hexchat",
+      "description": "HexChat is a free, open-source IRC (Internet Relay Chat) client with a graphical interface for easy communication.",
+      "link": "https://hexchat.github.io/",
+      "winget": "HexChat.HexChat",
+      "foss": true
+   },
+   "jami": {
+      "category": "Communications",
+      "choco": "jami",
+      "content": "Jami",
+      "description": "Jami is a secure and privacy-focused communication platform that offers audio and video calls, messaging, and file sharing.",
+      "link": "https://jami.net/",
+      "winget": "SFLinux.Jami",
+      "foss": true
+   },
+   "linphone": {
+      "category": "Communications",
+      "choco": "linphone",
+      "content": "Linphone",
+      "description": "Linphone is an open-source voice over IP (VoIPservice that allows for audio and video calls, messaging, and more.",
+      "link": "https://www.linphone.org/",
+      "winget": "BelledonneCommunications.Linphone",
+      "foss": true
+   },
+   "matrix": {
+      "category": "Communications",
+      "choco": "element-desktop",
+      "content": "Element",
+      "description": "Element is a client for Matrix; an open network for secure, decentralized communication.",
+      "link": "https://element.io/",
+      "winget": "Element.Element",
+      "foss": true
+   },
+   "qtox": {
+      "category": "Communications",
+      "choco": "qtox",
+      "content": "QTox",
+      "description": "QTox is a free and open-source messaging app that prioritizes user privacy and security in its design.",
+      "link": "https://qtox.github.io/",
+      "winget": "Tox.qTox",
+      "foss": true
+   },
+   "revolt": {
+      "category": "Communications",
+      "choco": "na",
+      "content": "Revolt",
+      "description": "Find your community, connect with the world. Revolt is one of the best ways to stay connected with your friends and community without sacrificing any usability.",
+      "link": "https://revolt.chat/",
+      "winget": "Revolt.RevoltDesktop",
+      "foss": true
+   },
+   "session": {
+      "category": "Communications",
+      "choco": "session",
+      "content": "Session",
+      "description": "Session is a private and secure messaging app built on a decentralized network for user privacy and data protection.",
+      "link": "https://getsession.org/",
+      "winget": "Session.Session",
+      "foss": true
+   },
+   "signal": {
+      "category": "Communications",
+      "choco": "signal",
+      "content": "Signal",
+      "description": "Signal is a privacy-focused messaging app that offers end-to-end encryption for secure and private communication.",
+      "link": "https://signal.org/",
+      "winget": "OpenWhisperSystems.Signal",
+      "foss": true
+   },
+   "slack": {
+      "category": "Communications",
+      "choco": "slack",
+      "content": "Slack",
+      "description": "Slack is a collaboration hub that connects teams and facilitates communication through channels, messaging, and file sharing.",
+      "link": "https://slack.com/",
+      "winget": "SlackTechnologies.Slack"
+   },
+   "teams": {
+      "category": "Communications",
+      "choco": "microsoft-teams",
+      "content": "Teams",
+      "description": "Microsoft Teams is a collaboration platform that integrates with Office 365 and offers chat, video conferencing, file sharing, and more.",
+      "link": "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software",
+      "winget": "Microsoft.Teams"
+   },
+   "telegram": {
+      "category": "Communications",
+      "choco": "telegram",
+      "content": "Telegram",
+      "description": "Telegram is a cloud-based instant messaging app known for its security features, speed, and simplicity.",
+      "link": "https://telegram.org/",
+      "winget": "Telegram.TelegramDesktop",
+      "foss": true
+   },
+   "unigram": {
+      "category": "Communications",
+      "choco": "na",
+      "content": "Unigram",
+      "description": "Unigram - Telegram for Windows",
+      "link": "https://unigramdev.github.io/",
+      "winget": "Telegram.Unigram",
+      "foss": true
+   },
+   "thunderbird": {
+      "category": "Communications",
+      "choco": "thunderbird",
+      "content": "Thunderbird",
+      "description": "Mozilla Thunderbird is a free and open-source email client, news client, and chat client with advanced features.",
+      "link": "https://www.thunderbird.net/",
+      "winget": "Mozilla.Thunderbird",
+      "foss": true
+   },
+   "betterbird": {
+      "category": "Communications",
+      "choco": "betterbird",
+      "content": "Betterbird",
+      "description": "Betterbird is a fork of Mozilla Thunderbird with additional features and bugfixes.",
+      "link": "https://www.betterbird.eu/",
+      "winget": "Betterbird.Betterbird",
+      "foss": true
+   },
+   "vesktop": {
+      "category": "Communications",
+      "choco": "na",
+      "content": "Vesktop",
+      "description": "A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed.",
+      "link": "https://github.com/Vencord/Vesktop",
+      "winget": "Vencord.Vesktop",
+      "foss": true
+   },
+   "viber": {
+      "category": "Communications",
+      "choco": "viber",
+      "content": "Viber",
+      "description": "Viber is a free messaging and calling app with features like group chats, video calls, and more.",
+      "link": "https://www.viber.com/",
+      "winget": "Rakuten.Viber"
+   },
+   "zoom": {
+      "category": "Communications",
+      "choco": "zoom",
+      "content": "Zoom",
+      "description": "Zoom is a popular video conferencing and web conferencing service for online meetings, webinars, and collaborative projects.",
+      "link": "https://zoom.us/",
+      "winget": "Zoom.Zoom"
+   },
+   "zulip": {
+      "category": "Communications",
+      "choco": "zulip",
+      "content": "Zulip",
+      "description": "Zulip is an open-source team collaboration tool with chat streams for productive and organized communication.",
+      "link": "https://zulipchat.com/",
+      "winget": "Zulip.Zulip",
+      "foss": true
+   }
+}

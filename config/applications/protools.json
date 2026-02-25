@@ -1,0 +1,162 @@
+{
+   "advancedip": {
+      "category": "Pro Tools",
+      "choco": "advanced-ip-scanner",
+      "content": "Advanced IP Scanner",
+      "description": "Advanced IP Scanner is a fast and easy-to-use network scanner. It is designed to analyze LAN networks and provides information about connected devices.",
+      "link": "https://www.advanced-ip-scanner.com/",
+      "winget": "Famatech.AdvancedIPScanner"
+   },
+   "angryipscanner": {
+      "category": "Pro Tools",
+      "choco": "angryip",
+      "content": "Angry IP Scanner",
+      "description": "Angry IP Scanner is an open-source and cross-platform network scanner. It is used to scan IP addresses and ports, providing information about network connectivity.",
+      "link": "https://angryip.org/",
+      "winget": "angryziber.AngryIPScanner",
+      "foss": true
+   },
+   "efibooteditor": {
+      "category": "Pro Tools",
+      "choco": "na",
+      "content": "EFI Boot Editor",
+      "description": "EFI Boot Editor is a tool for managing the EFI/UEFI boot entries on your system. It allows you to customize the boot configuration of your computer.",
+      "link": "https://www.easyuefi.com/",
+      "winget": "EFIBootEditor.EFIBootEditor"
+   },
+   "heidisql": {
+      "category": "Pro Tools",
+      "choco": "heidisql",
+      "content": "HeidiSQL",
+      "description": "HeidiSQL is a powerful and easy-to-use client for MySQL, MariaDB, Microsoft SQL Server, and PostgreSQL databases. It provides tools for database management and development.",
+      "link": "https://www.heidisql.com/",
+      "winget": "HeidiSQL.HeidiSQL",
+      "foss": true
+   },
+   "mremoteng": {
+      "category": "Pro Tools",
+      "choco": "mremoteng",
+      "content": "mRemoteNG",
+      "description": "mRemoteNG is a free and open-source remote connections manager. It allows you to view and manage multiple remote sessions in a single interface.",
+      "link": "https://mremoteng.org/",
+      "winget": "mRemoteNG.mRemoteNG",
+      "foss": true
+   },
+   "mullvadvpn": {
+      "category": "Pro Tools",
+      "choco": "mullvad-app",
+      "content": "Mullvad VPN",
+      "description": "This is the VPN client software for the Mullvad VPN service.",
+      "link": "https://github.com/mullvad/mullvadvpn-app",
+      "winget": "MullvadVPN.MullvadVPN",
+      "foss": true
+   },
+   "netbird": {
+      "category": "Pro Tools",
+      "choco": "netbird",
+      "content": "NetBird",
+      "description": "NetBird is a Open Source alternative comparable to TailScale that can be connected to a selfhosted Server.",
+      "link": "https://netbird.io/",
+      "winget": "netbird",
+      "foss": true
+   },
+   "nmap": {
+      "category": "Pro Tools",
+      "choco": "nmap",
+      "content": "Nmap",
+      "description": "Nmap (Network Mapper) is an open-source tool for network exploration and security auditing. It discovers devices on a network and provides information about their ports and services.",
+      "link": "https://nmap.org/",
+      "winget": "Insecure.Nmap",
+      "foss": true
+   },
+   "OpenVPN": {
+      "category": "Pro Tools",
+      "choco": "openvpn-connect",
+      "content": "OpenVPN Connect",
+      "description": "OpenVPN Connect is an open-source VPN client that allows you to connect securely to a VPN server. It provides a secure and encrypted connection for protecting your online privacy.",
+      "link": "https://openvpn.net/",
+      "winget": "OpenVPNTechnologies.OpenVPNConnect",
+      "foss": true
+   },
+   "Portmaster": {
+      "category": "Pro Tools",
+      "choco": "portmaster",
+      "content": "Portmaster",
+      "description": "Portmaster is a free and open-source application that puts you back in charge over all your computers network connections.",
+      "link": "https://safing.io/",
+      "winget": "Safing.Portmaster",
+      "foss": true
+   },
+   "putty": {
+      "category": "Pro Tools",
+      "choco": "putty",
+      "content": "PuTTY",
+      "description": "PuTTY is a free and open-source terminal emulator, serial console, and network file transfer application. It supports various network protocols such as SSH, Telnet, and SCP.",
+      "link": "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+      "winget": "PuTTY.PuTTY",
+      "foss": true
+   },
+   "rustdesk": {
+      "category": "Pro Tools",
+      "choco": "rustdesk.portable",
+      "content": "RustDesk",
+      "description": "RustDesk is a free and open-source remote desktop application. It provides a secure way to connect to remote machines and access desktop environments.",
+      "link": "https://rustdesk.com/",
+      "winget": "RustDesk.RustDesk",
+      "foss": true
+   },
+   "simplewall": {
+      "category": "Pro Tools",
+      "choco": "simplewall",
+      "content": "Simplewall",
+      "description": "Simplewall is a free and open-source firewall application for Windows. It allows users to control and manage the inbound and outbound network traffic of applications.",
+      "link": "https://github.com/henrypp/simplewall",
+      "winget": "Henry++.simplewall",
+      "foss": true
+   },
+   "ventoy": {
+      "category": "Pro Tools",
+      "choco": "ventoy",
+      "content": "Ventoy",
+      "description": "Ventoy is an open-source tool for creating bootable USB drives. It supports multiple ISO files on a single USB drive, making it a versatile solution for installing operating systems.",
+      "link": "https://www.ventoy.net/",
+      "winget": "Ventoy.Ventoy",
+      "foss": true
+   },
+   "winscp": {
+      "category": "Pro Tools",
+      "choco": "winscp",
+      "content": "WinSCP",
+      "description": "WinSCP is a popular open-source SFTP, FTP, and SCP client for Windows. It allows secure file transfers between a local and a remote computer.",
+      "link": "https://winscp.net/",
+      "winget": "WinSCP.WinSCP",
+      "foss": true
+   },
+   "wireguard": {
+      "category": "Pro Tools",
+      "choco": "wireguard",
+      "content": "WireGuard",
+      "description": "WireGuard is a fast and modern VPN (Virtual Private Network) protocol. It aims to be simpler and more efficient than other VPN protocols, providing secure and reliable connections.",
+      "link": "https://www.wireguard.com/",
+      "winget": "WireGuard.WireGuard",
+      "foss": true
+   },
+   "wireshark": {
+      "category": "Pro Tools",
+      "choco": "wireshark",
+      "content": "Wireshark",
+      "description": "Wireshark is a widely-used open-source network protocol analyzer. It allows users to capture and analyze network traffic in real-time, providing detailed insights into network activities.",
+      "link": "https://www.wireshark.org/",
+      "winget": "WiresharkFoundation.Wireshark",
+      "foss": true
+   },
+   "xpipe": {
+      "category": "Pro Tools",
+      "choco": "xpipe",
+      "content": "XPipe",
+      "description": "XPipe is an open-source tool for orchestrating containerized applications. It simplifies the deployment and management of containerized services in a distributed environment.",
+      "link": "https://xpipe.io/",
+      "winget": "xpipe-io.xpipe",
+      "foss": true
+   }
+}
