@@ -1,0 +1,199 @@
+{
+   "autoruns": {
+      "category": "Microsoft Tools",
+      "choco": "autoruns",
+      "content": "Autoruns",
+      "description": "This utility shows you what programs are configured to run during system bootup or login",
+      "link": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+      "winget": "Microsoft.Sysinternals.Autoruns"
+   },
+   "rdcman": {
+      "category": "Microsoft Tools",
+      "choco": "rdcman",
+      "content": "RDCMan",
+      "description": "RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers.",
+      "link": "https://learn.microsoft.com/en-us/sysinternals/downloads/rdcman",
+      "winget": "Microsoft.Sysinternals.RDCMan"
+   },
+   "azuredatastudio": {
+      "category": "Microsoft Tools",
+      "choco": "azure-data-studio",
+      "content": "Microsoft Azure Data Studio",
+      "description": "Azure Data Studio is a data management tool that enables you to work with SQL Server, Azure SQL DB and SQL DW from Windows, macOS and Linux.",
+      "link": "https://docs.microsoft.com/sql/azure-data-studio/what-is-azure-data-studio",
+      "winget": "Microsoft.AzureDataStudio"
+   },
+   "dismtools": {
+      "category": "Microsoft Tools",
+      "choco": "na",
+      "content": "DISMTools",
+      "description": "DISMTools is a fast, customizable GUI for the DISM utility, supporting Windows images from Windows 7 onward. It handles installations on any drive, offers project support, and lets users tweak settings like color modes, language, and DISM versions; powered by both native DISM and a managed DISM API.",
+      "link": "https://github.com/CodingWonders/DISMTools",
+      "winget": "CodingWondersSoftware.DISMTools.Stable",
+      "foss": true
+   },
+   "ntlite": {
+      "category": "Microsoft Tools",
+      "choco": "ntlite-free",
+      "content": "NTLite",
+      "description": "Integrate updates, drivers, automate Windows and application setup, speedup Windows deployment process and have it all set for the next time.",
+      "link": "https://ntlite.com",
+      "winget": "Nlitesoft.NTLite"
+   },
+   "dotnet3": {
+      "category": "Microsoft Tools",
+      "choco": "dotnetcore3-desktop-runtime",
+      "content": ".NET Desktop Runtime 3.1",
+      "description": ".NET Desktop Runtime 3.1 is a runtime environment required for running applications developed with .NET Core 3.1.",
+      "link": "https://dotnet.microsoft.com/download/dotnet/3.1",
+      "winget": "Microsoft.DotNet.DesktopRuntime.3_1"
+   },
+   "dotnet5": {
+      "category": "Microsoft Tools",
+      "choco": "dotnet-5.0-runtime",
+      "content": ".NET Desktop Runtime 5",
+      "description": ".NET Desktop Runtime 5 is a runtime environment required for running applications developed with .NET 5.",
+      "link": "https://dotnet.microsoft.com/download/dotnet/5.0",
+      "winget": "Microsoft.DotNet.DesktopRuntime.5"
+   },
+   "dotnet6": {
+      "category": "Microsoft Tools",
+      "choco": "dotnet-6.0-runtime",
+      "content": ".NET Desktop Runtime 6",
+      "description": ".NET Desktop Runtime 6 is a runtime environment required for running applications developed with .NET 6.",
+      "link": "https://dotnet.microsoft.com/download/dotnet/6.0",
+      "winget": "Microsoft.DotNet.DesktopRuntime.6"
+   },
+   "dotnet7": {
+      "category": "Microsoft Tools",
+      "choco": "dotnet-7.0-runtime",
+      "content": ".NET Desktop Runtime 7",
+      "description": ".NET Desktop Runtime 7 is a runtime environment required for running applications developed with .NET 7.",
+      "link": "https://dotnet.microsoft.com/download/dotnet/7.0",
+      "winget": "Microsoft.DotNet.DesktopRuntime.7"
+   },
+   "dotnet8": {
+      "category": "Microsoft Tools",
+      "choco": "dotnet-8.0-runtime",
+      "content": ".NET Desktop Runtime 8",
+      "description": ".NET Desktop Runtime 8 is a runtime environment required for running applications developed with .NET 8.",
+      "link": "https://dotnet.microsoft.com/download/dotnet/8.0",
+      "winget": "Microsoft.DotNet.DesktopRuntime.8"
+   },
+   "dotnet9": {
+      "category": "Microsoft Tools",
+      "choco": "dotnet-9.0-runtime",
+      "content": ".NET Desktop Runtime 9",
+      "description": ".NET Desktop Runtime 9 is a runtime environment required for running applications developed with .NET 9.",
+      "link": "https://dotnet.microsoft.com/download/dotnet/9.0",
+      "winget": "Microsoft.DotNet.DesktopRuntime.9"
+   },
+   "nuget": {
+      "category": "Microsoft Tools",
+      "choco": "nuget.commandline",
+      "content": "NuGet",
+      "description": "NuGet is a package manager for the .NET framework, enabling developers to manage and share libraries in their .NET applications.",
+      "link": "https://www.nuget.org/",
+      "winget": "Microsoft.NuGet",
+      "foss": true
+   },
+   "onedrive": {
+      "category": "Microsoft Tools",
+      "choco": "onedrive",
+      "content": "OneDrive",
+      "description": "OneDrive is a cloud storage service provided by Microsoft, allowing users to store and share files securely across devices.",
+      "link": "https://onedrive.live.com/",
+      "winget": "Microsoft.OneDrive"
+   },
+   "processexplorer": {
+      "category": "Microsoft Tools",
+      "choco": "na",
+      "content": "Process Explorer",
+      "description": "Process Explorer is a task manager and system monitor.",
+      "link": "https://learn.microsoft.com/sysinternals/downloads/process-explorer",
+      "winget": "Microsoft.Sysinternals.ProcessExplorer"
+   },
+   "powerautomate": {
+      "category": "Microsoft Tools",
+      "choco": "powerautomatedesktop",
+      "content": "Power Automate",
+      "description": "Using Power Automate Desktop you can automate tasks on the desktop as well as the Web.",
+      "link": "https://www.microsoft.com/en-us/power-platform/products/power-automate",
+      "winget": "Microsoft.PowerAutomateDesktop"
+   },
+   "powerbi": {
+      "category": "Microsoft Tools",
+      "choco": "powerbi",
+      "content": "Power BI",
+      "description": "Create stunning reports and visualizations with Power BI Desktop. It puts visual analytics at your fingertips with intuitive report authoring. Drag-and-drop to place content exactly where you want it on the flexible and fluid canvas. Quickly discover patterns as you explore a single unified view of linked, interactive visualizations.",
+      "link": "https://www.microsoft.com/en-us/power-platform/products/power-bi/",
+      "winget": "Microsoft.PowerBI"
+   },
+   "powershell": {
+      "category": "Microsoft Tools",
+      "choco": "powershell-core",
+      "content": "PowerShell",
+      "description": "PowerShell is a task automation framework and scripting language designed for system administrators, offering powerful command-line capabilities.",
+      "link": "https://github.com/PowerShell/PowerShell",
+      "winget": "Microsoft.PowerShell",
+      "foss": true
+   },
+   "powertoys": {
+      "category": "Microsoft Tools",
+      "choco": "powertoys",
+      "content": "PowerToys",
+      "description": "PowerToys is a set of utilities for power users to enhance productivity, featuring tools like FancyZones, PowerRename, and more.",
+      "link": "https://github.com/microsoft/PowerToys",
+      "winget": "Microsoft.PowerToys",
+      "foss": true
+   },
+   "processmonitor": {
+      "category": "Microsoft Tools",
+      "choco": "procexp",
+      "content": "SysInternals Process Monitor",
+      "description": "SysInternals Process Monitor is an advanced monitoring tool that shows real-time file system, registry, and process/thread activity.",
+      "link": "https://docs.microsoft.com/en-us/sysinternals/downloads/procmon",
+      "winget": "Microsoft.Sysinternals.ProcessMonitor"
+   },
+   "sqlmanagementstudio": {
+      "category": "Microsoft Tools",
+      "choco": "sql-server-management-studio",
+      "content": "Microsoft SQL Server Management Studio",
+      "description": "SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases.",
+      "link": "https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16",
+      "winget": "Microsoft.SQLServerManagementStudio"
+   },
+   "tcpview": {
+      "category": "Microsoft Tools",
+      "choco": "tcpview",
+      "content": "SysInternals TCPView",
+      "description": "SysInternals TCPView is a network monitoring tool that displays a detailed list of all TCP and UDP endpoints on your system.",
+      "link": "https://docs.microsoft.com/en-us/sysinternals/downloads/tcpview",
+      "winget": "Microsoft.Sysinternals.TCPView"
+   },
+   "terminal": {
+      "category": "Microsoft Tools",
+      "choco": "microsoft-windows-terminal",
+      "content": "Windows Terminal",
+      "description": "Windows Terminal is a modern, fast, and efficient terminal application for command-line users, supporting multiple tabs, panes, and more.",
+      "link": "https://aka.ms/terminal",
+      "winget": "Microsoft.WindowsTerminal",
+      "foss": true
+   },
+   "vc2015_32": {
+      "category": "Microsoft Tools",
+      "choco": "na",
+      "content": "Visual C++ 2015-2022 32-bit",
+      "description": "Visual C++ 2015-2022 32-bit redistributable package installs runtime components of Visual C++ libraries required to run 32-bit applications.",
+      "link": "https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads",
+      "winget": "Microsoft.VCRedist.2015+.x86"
+   },
+   "vc2015_64": {
+      "category": "Microsoft Tools",
+      "choco": "na",
+      "content": "Visual C++ 2015-2022 64-bit",
+      "description": "Visual C++ 2015-2022 64-bit redistributable package installs runtime components of Visual C++ libraries required to run 64-bit applications.",
+      "link": "https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads",
+      "winget": "Microsoft.VCRedist.2015+.x64"
+   }
+}

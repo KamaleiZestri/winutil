@@ -1,0 +1,474 @@
+{
+   "anaconda3": {
+      "category": "Development",
+      "choco": "anaconda3",
+      "content": "Anaconda",
+      "description": "Anaconda is a distribution of the Python and R programming languages for scientific computing.",
+      "link": "https://www.anaconda.com/products/distribution",
+      "winget": "Anaconda.Anaconda3"
+   },
+   "clink": {
+      "category": "Development",
+      "choco": "clink",
+      "content": "Clink",
+      "description": "Clink is a powerful Bash-compatible command-line interface (CLIenhancement for Windows, adding features like syntax highlighting and improved history).",
+      "link": "https://mridgers.github.io/clink/",
+      "winget": "chrisant996.Clink",
+      "foss": true
+   },
+   "cmake": {
+      "category": "Development",
+      "choco": "cmake",
+      "content": "CMake",
+      "description": "CMake is an open-source, cross-platform family of tools designed to build, test and package software.",
+      "link": "https://cmake.org/",
+      "winget": "Kitware.CMake",
+      "foss": true
+   },
+   "DaxStudio": {
+      "category": "Development",
+      "choco": "daxstudio",
+      "content": "DaxStudio",
+      "description": "DAX (Data Analysis eXpressions) Studio is the ultimate tool for executing and analyzing DAX queries against Microsoft Tabular models.",
+      "link": "https://daxstudio.org/",
+      "winget": "DaxStudio.DaxStudio",
+      "foss": true
+   },
+   "dockerdesktop": {
+      "category": "Development",
+      "choco": "docker-desktop",
+      "content": "Docker Desktop",
+      "description": "Docker Desktop is a powerful tool for containerized application development and deployment.",
+      "link": "https://www.docker.com/products/docker-desktop",
+      "winget": "Docker.DockerDesktop"
+   },
+   "git": {
+      "category": "Development",
+      "choco": "git",
+      "content": "Git",
+      "description": "Git is a distributed version control system widely used for tracking changes in source code during software development.",
+      "link": "https://git-scm.com/",
+      "winget": "Git.Git",
+      "foss": true
+   },
+   "gitbutler": {
+      "category": "Development",
+      "choco": "na",
+      "content": "Git Butler",
+      "description": "A Git client for simultaneous branches on top of your existing workflow.",
+      "link": "https://gitbutler.com/",
+      "winget": "GitButler.GitButler"
+   },
+   "gitextensions": {
+      "category": "Development",
+      "choco": "git;gitextensions",
+      "content": "Git Extensions",
+      "description": "Git Extensions is a graphical user interface for Git, providing additional features for easier source code management.",
+      "link": "https://gitextensions.github.io/",
+      "winget": "GitExtensionsTeam.GitExtensions"
+   },
+   "githubcli": {
+      "category": "Development",
+      "choco": "git;gh",
+      "content": "GitHub CLI",
+      "description": "GitHub CLI is a command-line tool that simplifies working with GitHub directly from the terminal.",
+      "link": "https://cli.github.com/",
+      "winget": "GitHub.cli",
+      "foss": true
+   },
+   "githubdesktop": {
+      "category": "Development",
+      "choco": "git;github-desktop",
+      "content": "GitHub Desktop",
+      "description": "GitHub Desktop is a visual Git client that simplifies collaboration on GitHub repositories with an easy-to-use interface.",
+      "link": "https://desktop.github.com/",
+      "winget": "GitHub.GitHubDesktop",
+      "foss": true
+   },
+   "gitkrakenclient": {
+      "category": "Development",
+      "choco": "gitkraken",
+      "content": "GitKraken Client",
+      "description": "GitKraken Client is a powerful visual Git client from Axosoft that works with ALL git repositories on any hosting environment.",
+      "link": "https://www.gitkraken.com/git-client",
+      "winget": "Axosoft.GitKraken"
+   },
+   "godotengine": {
+      "category": "Development",
+      "choco": "godot",
+      "content": "Godot Engine",
+      "description": "Godot Engine is a free, open-source 2D and 3D game engine with a focus on usability and flexibility.",
+      "link": "https://godotengine.org/",
+      "winget": "GodotEngine.GodotEngine",
+      "foss": true
+   },
+   "gitify": {
+      "category": "Development",
+      "choco": "na",
+      "content": "Gitify",
+      "description": "GitHub notifications on your menu bar.",
+      "link": "https://www.gitify.io/",
+      "winget": "Gitify.Gitify",
+      "foss": true
+   },
+   "golang": {
+      "category": "Development",
+      "choco": "golang",
+      "content": "Go",
+      "description": "Go (or Golang) is a statically typed, compiled programming language designed for simplicity, reliability, and efficiency.",
+      "link": "https://go.dev/",
+      "winget": "GoLang.Go",
+      "foss": true
+   },
+   "helix": {
+      "category": "Development",
+      "choco": "helix",
+      "content": "Helix",
+      "description": "Helix is a neovim alternative built in rust.",
+      "link": "https://helix-editor.com/",
+      "winget": "Helix.Helix",
+      "foss": true
+   },
+   "imhex": {
+      "category": "Development",
+      "choco": "na",
+      "content": "ImHex (Hex Editor)",
+      "description": "A modern, featureful Hex Editor for Reverse Engineers and Developers.",
+      "link": "https://imhex.werwolv.net/",
+      "winget": "WerWolv.ImHex",
+      "foss": true
+   },
+   "java8": {
+      "category": "Development",
+      "choco": "corretto8jdk",
+      "content": "Amazon Corretto 8 (LTS)",
+      "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK).",
+      "link": "https://aws.amazon.com/corretto",
+      "winget": "Amazon.Corretto.8.JDK",
+      "foss": true
+   },
+   "java11": {
+      "category": "Development",
+      "choco": "corretto11jdk",
+      "content": "Amazon Corretto 11 (LTS)",
+      "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK).",
+      "link": "https://aws.amazon.com/corretto",
+      "winget": "Amazon.Corretto.11.JDK",
+      "foss": true
+   },
+   "java17": {
+      "category": "Development",
+      "choco": "corretto17jdk",
+      "content": "Amazon Corretto 17 (LTS)",
+      "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK).",
+      "link": "https://aws.amazon.com/corretto",
+      "winget": "Amazon.Corretto.17.JDK",
+      "foss": true
+   },
+   "java21": {
+      "category": "Development",
+      "choco": "corretto21jdk",
+      "content": "Amazon Corretto 21 (LTS)",
+      "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK).",
+      "link": "https://aws.amazon.com/corretto",
+      "winget": "Amazon.Corretto.21.JDK",
+      "foss": true
+   },
+   "java25": {
+      "category": "Development",
+      "choco": "corretto25jdk",
+      "content": "Amazon Corretto 25 (LTS)",
+      "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK).",
+      "link": "https://aws.amazon.com/corretto",
+      "winget": "Amazon.Corretto.25.JDK",
+      "foss": true
+   },
+   "jetbrains": {
+      "category": "Development",
+      "choco": "jetbrainstoolbox",
+      "content": "Jetbrains Toolbox",
+      "description": "Jetbrains Toolbox is a platform for easy installation and management of JetBrains developer tools.",
+      "link": "https://www.jetbrains.com/toolbox/",
+      "winget": "JetBrains.Toolbox"
+   },
+   "lazygit": {
+      "category": "Development",
+      "choco": "lazygit",
+      "content": "Lazygit",
+      "description": "Simple terminal UI for git commands",
+      "link": "https://github.com/jesseduffield/lazygit/",
+      "winget": "JesseDuffield.lazygit",
+      "foss": true
+   },
+   "neovim": {
+      "category": "Development",
+      "choco": "neovim",
+      "content": "Neovim",
+      "description": "Neovim is a highly extensible text editor and an improvement over the original Vim editor.",
+      "link": "https://neovim.io/",
+      "winget": "Neovim.Neovim"
+   },
+   "nodejs": {
+      "category": "Development",
+      "choco": "nodejs",
+      "content": "NodeJS",
+      "description": "NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine for building server-side and networking applications.",
+      "link": "https://nodejs.org/",
+      "winget": "OpenJS.NodeJS",
+      "foss": true
+   },
+   "nodejslts": {
+      "category": "Development",
+      "choco": "nodejs-lts",
+      "content": "NodeJS LTS",
+      "description": "NodeJS LTS provides Long-Term Support releases for stable and reliable server-side JavaScript development.",
+      "link": "https://nodejs.org/",
+      "winget": "OpenJS.NodeJS.LTS"
+   },
+   "nvm": {
+      "category": "Development",
+      "choco": "nvm",
+      "content": "Node Version Manager",
+      "description": "Node Version Manager (NVM) for Windows allows you to easily switch between multiple Node.js versions.",
+      "link": "https://github.com/coreybutler/nvm-windows",
+      "winget": "CoreyButler.NVMforWindows",
+      "foss": true
+   },
+   "posh": {
+      "category": "Development",
+      "choco": "oh-my-posh",
+      "content": "Oh My Posh (Prompt)",
+      "description": "Oh My Posh is a cross-platform prompt theme engine for any shell.",
+      "link": "https://ohmyposh.dev/",
+      "winget": "JanDeDobbeleer.OhMyPosh",
+      "foss": true
+   },
+   "postman": {
+      "category": "Development",
+      "choco": "postman",
+      "content": "Postman",
+      "description": "Postman is a collaboration platform for API development that simplifies the process of developing APIs.",
+      "link": "https://www.postman.com/",
+      "winget": "Postman.Postman"
+   },
+   "python3": {
+      "category": "Development",
+      "choco": "python",
+      "content": "Python3",
+      "description": "Python is a versatile programming language used for web development, data analysis, artificial intelligence, and more.",
+      "link": "https://www.python.org/",
+      "winget": "Python.Python.3.14",
+      "foss": true
+   },
+   "rustlang": {
+      "category": "Development",
+      "choco": "rust",
+      "content": "Rust",
+      "description": "Rust is a programming language designed for safety and performance, particularly focused on systems programming.",
+      "link": "https://www.rust-lang.org/",
+      "winget": "Rustlang.Rust.MSVC",
+      "foss": true
+   },
+   "systeminformer": {
+      "category": "Development",
+      "choco": "na",
+      "content": "System Informer",
+      "description": "A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.",
+      "link": "https://systeminformer.com/",
+      "winget": "WinsiderSS.SystemInformer",
+      "foss": true
+   },
+   "starship": {
+      "category": "Development",
+      "choco": "starship",
+      "content": "Starship (Shell Prompt)",
+      "description": "Starship is a minimal, fast, and customizable prompt for any shell.",
+      "link": "https://starship.rs/",
+      "winget": "starship",
+      "foss": true
+   },
+   "sublimemerge": {
+      "category": "Development",
+      "choco": "sublimemerge",
+      "content": "Sublime Merge",
+      "description": "Sublime Merge is a Git client with advanced features and a beautiful interface.",
+      "link": "https://www.sublimemerge.com/",
+      "winget": "SublimeHQ.SublimeMerge"
+   },
+   "sublimetext": {
+      "category": "Development",
+      "choco": "sublimetext4",
+      "content": "Sublime Text",
+      "description": "Sublime Text is a sophisticated text editor for code, markup, and prose.",
+      "link": "https://www.sublimetext.com/",
+      "winget": "SublimeHQ.SublimeText.4"
+   },
+   "swift": {
+      "category": "Development",
+      "choco": "na",
+      "content": "Swift toolchain",
+      "description": "Swift is a general-purpose programming language that's approachable for newcomers and powerful for experts.",
+      "link": "https://www.swift.org/",
+      "winget": "Swift.Toolchain",
+      "foss": true
+   },
+   "Thonny": {
+      "category": "Development",
+      "choco": "thonny",
+      "content": "Thonny Python IDE",
+      "description": "Python IDE for beginners.",
+      "link": "https://github.com/thonny/thonny",
+      "winget": "AivarAnnamaa.Thonny",
+      "foss": true
+   },
+   "MuEditor": {
+      "category": "Development",
+      "choco": "na",
+      "content": "Code With Mu (Mu Editor)",
+      "description": "Mu is a Python code editor for beginner programmers",
+      "link": "https://codewith.mu/",
+      "winget": "Mu.Mu",
+      "foss": true
+   },
+   "unity": {
+      "category": "Development",
+      "choco": "unityhub",
+      "content": "Unity Game Engine",
+      "description": "Unity is a powerful game development platform for creating 2D, 3D, augmented reality, and virtual reality games.",
+      "link": "https://unity.com/",
+      "winget": "Unity.UnityHub"
+   },
+   "vagrant": {
+      "category": "Development",
+      "choco": "vagrant",
+      "content": "Vagrant",
+      "description": "Vagrant is an open-source tool for building and managing virtualized development environments.",
+      "link": "https://www.vagrantup.com/",
+      "winget": "Hashicorp.Vagrant",
+      "foss": true
+   },
+   "visualstudio": {
+      "category": "Development",
+      "choco": "visualstudio2022community",
+      "content": "Visual Studio 2022",
+      "description": "Visual Studio 2022 is an integrated development environment (IDE) for building, debugging, and deploying applications.",
+      "link": "https://visualstudio.microsoft.com/",
+      "winget": "Microsoft.VisualStudio.2022.Community"
+   },
+   "vscode": {
+      "category": "Development",
+      "choco": "vscode",
+      "content": "VS Code",
+      "description": "Visual Studio Code is a free, open-source code editor with support for multiple programming languages.",
+      "link": "https://code.visualstudio.com/",
+      "winget": "Microsoft.VisualStudioCode",
+      "foss": true
+   },
+   "vscodium": {
+      "category": "Development",
+      "choco": "vscodium",
+      "content": "VS Codium",
+      "description": "VSCodium is a community-driven, freely-licensed binary distribution of Microsoft's VS Code.",
+      "link": "https://vscodium.com/",
+      "winget": "VSCodium.VSCodium",
+      "foss": true
+   },
+   "wezterm": {
+      "category": "Development",
+      "choco": "wezterm",
+      "content": "Wezterm",
+      "description": "WezTerm is a powerful cross-platform terminal emulator and multiplexer",
+      "link": "https://wezfurlong.org/wezterm/index.html",
+      "winget": "wez.wezterm",
+      "foss": true
+   },
+   "yarn": {
+      "category": "Development",
+      "choco": "yarn",
+      "content": "Yarn",
+      "description": "Yarn is a fast, reliable, and secure dependency management tool for JavaScript projects.",
+      "link": "https://yarnpkg.com/",
+      "winget": "Yarn.Yarn",
+      "foss": true
+   },
+   "miniconda": {
+      "category": "Development",
+      "choco": "miniconda3",
+      "content": "Miniconda",
+      "description": "Miniconda is a free minimal installer for conda. It is a small bootstrap version of Anaconda that includes only conda, Python, the packages they both depend on, and a small number of other useful packages (like pip, zlib, and a few others).",
+      "link": "https://docs.conda.io/projects/miniconda",
+      "winget": "Anaconda.Miniconda3",
+      "foss": true
+   },
+   "pixi": {
+      "category": "Development",
+      "choco": "pixi",
+      "content": "Pixi",
+      "description": "Pixi is a fast software package manager built on top of the existing conda ecosystem. Spins up development environments quickly on Windows, macOS and Linux. Pixi supports Python, R, C/C++, Rust, Ruby, and many other languages.",
+      "link": "https://pixi.sh",
+      "winget": "prefix-dev.pixi",
+      "foss": true
+   },
+   "temurin": {
+      "category": "Development",
+      "choco": "temurin",
+      "content": "Eclipse Temurin",
+      "description": "Eclipse Temurin is the open source Java SE build based upon OpenJDK.",
+      "link": "https://adoptium.net/temurin/",
+      "winget": "EclipseAdoptium.Temurin.21.JDK",
+      "foss": true
+   },
+   "pyenvwin": {
+      "category": "Development",
+      "choco": "pyenv-win",
+      "content": "Python Version Manager (pyenv-win)",
+      "description": "pyenv for Windows is a simple python version management tool. It lets you easily switch between multiple versions of Python.",
+      "link": "https://pyenv-win.github.io/pyenv-win/",
+      "winget": "na",
+      "foss": true
+   },
+   "fnm": {
+      "category": "Development",
+      "choco": "fnm",
+      "content": "Fast Node Manager",
+      "description": "Fast Node Manager (fnm) allows you to switch your Node version by using the Terminal",
+      "link": "https://github.com/Schniz/fnm",
+      "winget": "Schniz.fnm",
+      "foss": true
+   },
+   "PulsarEdit": {
+      "category": "Development",
+      "choco": "pulsar",
+      "content": "Pulsar",
+      "description": "A Community-led Hyper-Hackable Text Editor",
+      "link": "https://pulsar-edit.dev/",
+      "winget": "Pulsar-Edit.Pulsar",
+      "foss": true
+   },
+   "Aegisub": {
+      "category": "Development",
+      "choco": "aegisub",
+      "content": "Aegisub",
+      "description": "Aegisub is a free, cross-platform open source tool for creating and modifying subtitles. Aegisub makes it quick and easy to time subtitles to audio, and features many powerful tools for styling them, including a built-in real-time video preview.",
+      "link": "https://github.com/Aegisub/Aegisub",
+      "winget": "Aegisub.Aegisub",
+      "foss": true
+   },
+   "Fork": {
+      "category": "Development",
+      "choco": "git-fork",
+      "content": "Fork",
+      "description": "Fork - a fast and friendly git client.",
+      "link": "https://git-fork.com/",
+      "winget": "Fork.Fork"
+   },
+   "Zed": {
+      "category": "Development",
+      "choco": "na",
+      "content": "Zed",
+      "description": "Zed is a modern, high-performance code editor designed from the ground up for speed and collaboration.",
+      "link": "https://zed.dev/",
+      "winget": "ZedIndustries.Zed",
+      "foss": true
+   }
+}

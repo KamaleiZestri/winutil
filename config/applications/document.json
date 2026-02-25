@@ -1,0 +1,221 @@
+{
+   "adobe": {
+      "category": "Document",
+      "choco": "adobereader",
+      "content": "Adobe Acrobat Reader",
+      "description": "Adobe Acrobat Reader is a free PDF viewer with essential features for viewing, printing, and annotating PDF documents.",
+      "link": "https://www.adobe.com/acrobat/pdf-reader.html",
+      "winget": "Adobe.Acrobat.Reader.64-bit"
+   },
+   "affine": {
+      "category": "Document",
+      "choco": "na",
+      "content": "AFFiNE",
+      "description": "AFFiNE is an open source alternative to Notion. Write, draw, plan all at once. Selfhost it to sync across devices.",
+      "link": "https://affine.pro/",
+      "winget": "ToEverything.AFFiNE",
+      "foss": true
+   },
+   "anki": {
+      "category": "Document",
+      "choco": "anki",
+      "content": "Anki",
+      "description": "Anki is a flashcard application that helps you memorize information with intelligent spaced repetition.",
+      "link": "https://apps.ankiweb.net/",
+      "winget": "Anki.Anki",
+      "foss": true
+   },
+   "calibre": {
+      "category": "Document",
+      "choco": "calibre",
+      "content": "Calibre",
+      "description": "Calibre is a powerful and easy-to-use e-book manager, viewer, and converter.",
+      "link": "https://calibre-ebook.com/",
+      "winget": "calibre.calibre",
+      "foss": true
+   },
+   "foxpdfeditor": {
+      "category": "Document",
+      "choco": "na",
+      "content": "Foxit PDF Editor",
+      "description": "Foxit PDF Editor is a feature-rich PDF editor and viewer with a familiar ribbon-style interface.",
+      "link": "https://www.foxit.com/pdf-editor/",
+      "winget": "Foxit.PhantomPDF"
+   },
+   "foxpdfreader": {
+      "category": "Document",
+      "choco": "foxitreader",
+      "content": "Foxit PDF Reader",
+      "description": "Foxit PDF Reader is a free PDF viewer with a familiar ribbon-style interface.",
+      "link": "https://www.foxit.com/pdf-reader/",
+      "winget": "Foxit.FoxitReader"
+   },
+   "joplin": {
+      "category": "Document",
+      "choco": "joplin",
+      "content": "Joplin (FOSS Notes)",
+      "description": "Joplin is an open-source note-taking and to-do application with synchronization capabilities.",
+      "link": "https://joplinapp.org/",
+      "winget": "Joplin.Joplin",
+      "foss": true
+   },
+   "libreoffice": {
+      "category": "Document",
+      "choco": "libreoffice-fresh",
+      "content": "LibreOffice",
+      "description": "LibreOffice is a powerful and free office suite, compatible with other major office suites.",
+      "link": "https://www.libreoffice.org/",
+      "winget": "TheDocumentFoundation.LibreOffice",
+      "foss": true
+   },
+   "logseq": {
+      "category": "Document",
+      "choco": "logseq",
+      "content": "Logseq",
+      "description": "Logseq is a versatile knowledge management and note-taking application designed for the digital thinker. With a focus on the interconnectedness of ideas, Logseq allows users to seamlessly organize their thoughts through a combination of hierarchical outlines and bi-directional linking. It supports both structured and unstructured content, enabling users to create a personalized knowledge graph that adapts to their evolving ideas and insights.",
+      "link": "https://logseq.com/",
+      "winget": "Logseq.Logseq",
+      "foss": true
+   },
+   "masscode": {
+      "category": "Document",
+      "choco": "na",
+      "content": "massCode (Snippet Manager)",
+      "description": "massCode is a fast and efficient open-source code snippet manager for developers.",
+      "link": "https://masscode.io/",
+      "winget": "antonreshetov.massCode",
+      "foss": true
+   },
+   "naps2": {
+      "category": "Document",
+      "choco": "naps2",
+      "content": "NAPS2 (Document Scanner)",
+      "description": "NAPS2 is a document scanning application that simplifies the process of creating electronic documents.",
+      "link": "https://www.naps2.com/",
+      "winget": "Cyanfish.NAPS2",
+      "foss": true
+   },
+   "notepadplus": {
+      "category": "Document",
+      "choco": "notepadplusplus",
+      "content": "Notepad++",
+      "description": "Notepad++ is a free, open-source code editor and Notepad replacement with support for multiple languages.",
+      "link": "https://notepad-plus-plus.org/",
+      "winget": "Notepad++.Notepad++",
+      "foss": true
+   },
+   "obsidian": {
+      "category": "Document",
+      "choco": "obsidian",
+      "content": "Obsidian",
+      "description": "Obsidian is a powerful note-taking and knowledge management application.",
+      "link": "https://obsidian.md/",
+      "winget": "Obsidian.Obsidian"
+   },
+   "okular": {
+      "category": "Document",
+      "choco": "okular",
+      "content": "Okular",
+      "description": "Okular is a versatile document viewer with advanced features.",
+      "link": "https://okular.kde.org/",
+      "winget": "KDE.Okular",
+      "foss": true
+   },
+   "onlyoffice": {
+      "category": "Document",
+      "choco": "onlyoffice",
+      "content": "ONLYOffice Desktop",
+      "description": "ONLYOffice Desktop is a comprehensive office suite for document editing and collaboration.",
+      "link": "https://www.onlyoffice.com/desktop.aspx",
+      "winget": "ONLYOFFICE.DesktopEditors",
+      "foss": true
+   },
+   "pdf24creator": {
+      "category": "Document",
+      "choco": "pdf24",
+      "content": "PDF24 creator",
+      "description": "Free and easy-to-use online/desktop PDF tools that make you more productive",
+      "link": "https://tools.pdf24.org/en/",
+      "winget": "geeksoftwareGmbH.PDF24Creator"
+   },
+   "pdfsam": {
+      "category": "Document",
+      "choco": "pdfsam",
+      "content": "PDFsam Basic",
+      "description": "PDFsam Basic is a free and open-source tool for splitting, merging, and rotating PDF files.",
+      "link": "https://pdfsam.org/",
+      "winget": "PDFsam.PDFsam",
+      "foss": true
+   },
+   "simplenote": {
+      "category": "Document",
+      "choco": "simplenote",
+      "content": "simplenote",
+      "description": "Simplenote is an easy way to keep notes, lists, ideas and more.",
+      "link": "https://simplenote.com/",
+      "winget": "Automattic.Simplenote",
+      "foss": true
+   },
+   "sumatra": {
+      "category": "Document",
+      "choco": "sumatrapdf",
+      "content": "Sumatra PDF",
+      "description": "Sumatra PDF is a lightweight and fast PDF viewer with minimalistic design.",
+      "link": "https://www.sumatrapdfreader.org/free-pdf-reader.html",
+      "winget": "SumatraPDF.SumatraPDF",
+      "foss": true
+   },
+   "pdfgear": {
+      "category": "Document",
+      "choco": "na",
+      "content": "PDFgear",
+      "description": "PDFgear is a piece of full-featured PDF management software for Windows, Mac, and mobile, and it's completely free to use.",
+      "link": "https://www.pdfgear.com/",
+      "winget": "PDFgear.PDFgear"
+   },
+   "winmerge": {
+      "category": "Document",
+      "choco": "winmerge",
+      "content": "WinMerge",
+      "description": "WinMerge is a visual text file and directory comparison tool for Windows.",
+      "link": "https://winmerge.org/",
+      "winget": "WinMerge.WinMerge",
+      "foss": true
+   },
+   "xournal": {
+      "category": "Document",
+      "choco": "xournalplusplus",
+      "content": "Xournal++",
+      "description": "Xournal++ is an open-source handwriting notetaking software with PDF annotation capabilities.",
+      "link": "https://xournalpp.github.io/",
+      "winget": "Xournal++.Xournal++",
+      "foss": true
+   },
+   "zim": {
+      "category": "Document",
+      "choco": "zim",
+      "content": "Zim Desktop Wiki",
+      "description": "Zim Desktop Wiki is a graphical text editor used to maintain a collection of wiki pages.",
+      "link": "https://zim-wiki.org/",
+      "winget": "Zimwiki.Zim",
+      "foss": true
+   },
+   "znote": {
+      "category": "Document",
+      "choco": "na",
+      "content": "Znote",
+      "description": "Znote is a note-taking application.",
+      "link": "https://znote.io/",
+      "winget": "alagrede.znote",
+      "foss": true
+   },
+   "zotero": {
+      "category": "Document",
+      "choco": "zotero",
+      "content": "Zotero",
+      "description": "Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share your research materials.",
+      "link": "https://www.zotero.org/",
+      "winget": "DigitalScholar.Zotero",
+      "foss": true
+   }
+}
