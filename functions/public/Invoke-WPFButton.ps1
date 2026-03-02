@@ -57,6 +57,7 @@ function Invoke-WPFButton {
         "WPFtweaksbutton" {Invoke-WPFtweaksbutton}
         "WPFOOSUbutton" {Invoke-WPFOOSU}
         "WPFCleanUserProfilesButton" {Invoke-CleanUserProfilesButton}
+        "WPFRestartPrintSpooler" {Invoke-RestartPrintSpooler}
         "WPFAddUltPerf" {Invoke-WPFUltimatePerformance -State "Enable"}
         "WPFRemoveUltPerf" {Invoke-WPFUltimatePerformance -State "Disable"}
         "WPFundoall" {Invoke-WPFundoall}

@@ -1,4 +1,12 @@
 {
+  "WPFRestartPrintSpooler": {
+    "Content": "Restart Print Spooler",
+    "Description": "Clears print queue and restarts print spooler.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a039_",
+    "Type": "Button"
+  },
   "WPFTweaksStayOnLidClose": {
     "Content": "Stay on while lid is closed",
     "Description": "Device stays on while lid is closed as long as device is plugged in.",
