@@ -3,7 +3,8 @@ Add-Type @"
 public enum PackageManagers
 {
     Winget,
-    Choco
+    Choco,
+    Local
 }
 "@
 
@@ -187,10 +188,15 @@ $sync.WingetRadioButton.Add_Checked({
     $sync.preferences.packagemanager = [PackageManagers]::Winget
     Set-Preferences -save
 })
+$sync.LocalRadioButton.Add_Checked({
+    $sync.preferences.packagemanager = [PackageManagers]::Local
+    Set-Preferences -save
+})
 
 switch ($sync.preferences.packagemanager) {
     "Choco" {$sync.ChocoRadioButton.IsChecked = $true; break}
     "Winget" {$sync.WingetRadioButton.IsChecked = $true; break}
+    "Local" {$sync.LocalRadioButton.IsChecked = $true; break}
 }
 
 $sync.keys | ForEach-Object {
