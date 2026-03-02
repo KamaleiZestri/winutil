@@ -60,7 +60,7 @@ function Set-Preferences{
             $sync.preferences.theme = "Auto"
         }
         if ($null -eq $sync.preferences.packagemanager) {
-            $sync.preferences.packagemanager = "Winget"
+            $sync.preferences.packagemanager = [PackageManagers]::Local
         }
 
         # convert packagemanager to enum
