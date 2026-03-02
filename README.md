@@ -18,3 +18,4 @@ Changes here include:
    - Add "App defaults" tweak.
    - Add "Lid stays on while closed" tweak.
    - Add "Restart Printer Spooler" button to tweaks.
+   - Add "Power Options" tweak.
