@@ -2272,7 +2272,7 @@
   },
   "WPFToggleBingSearch": {
     "Content": "Bing Search in Start Menu",
-    "Description": "If enabled, Bing web search results will be included in your Start Menu search.",
+    "Description": "If enable then DOES NOT include web search results from Bing in your Start Menu search.",
     "category": "Customize Preferences",
     "panel": "2",
     "Type": "Toggle",
@@ -2280,10 +2280,10 @@
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Search",
         "Name": "BingSearchEnabled",
-        "Value": "1",
+        "Value": "0",
         "Type": "DWord",
-        "OriginalValue": "0",
-        "DefaultState": "true"
+        "OriginalValue": "1",
+        "DefaultState": "false"
       }
     ],
     "link": "https://winutil.christitus.com/dev/tweaks/customize-preferences/bingsearch"

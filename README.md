@@ -9,6 +9,7 @@ Changes here include:
 - Changes
    - Change winutildir to local res
    - Switch autorun call order to installs, tweaks, features
+   - Invert `WPFToggleBingSearch` state
 
 - Additions
    - Add "Install Clean User Profiles" tweak.
