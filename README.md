@@ -8,3 +8,7 @@ Changes here include:
 
 - Changes
    - Change winutildir to local res
+
+- Additions
+   - Add "Install Clean User Profiles" tweak.
+   - Add "Run Clean User Profiles" button to tweaks.
