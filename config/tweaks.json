@@ -1,4 +1,18 @@
 {
+  "WPFTweaksArbitraryFiles": {
+    "Content": "Install arbitrary files",
+    "Description": "Install files from /res/arb into default desktop.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "InvokeScript": [
+      "
+      Get-ChildItem 'res\\arb' | ForEach-Object {
+        Copy-Item $psitem.FullName -Destination 'C:\\Users\\Default\\Desktop'
+      }
+      "
+    ],
+    "link": ""
+  },
   "WPFTweaksPowerOptions": {
     "Content": "Set Power Options",
     "Description": "Set default power options to Battery Display: 1 hour, BatterySleep: 2 hour, Plugin Display 1 hour, PluginSleep 3 hours",

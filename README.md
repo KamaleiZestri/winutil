@@ -19,3 +19,4 @@ Changes here include:
    - Add "Lid stays on while closed" tweak.
    - Add "Restart Printer Spooler" button to tweaks.
    - Add "Power Options" tweak.
+   - Add "Add arbitrary files" tweak.
