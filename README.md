@@ -12,3 +12,4 @@ Changes here include:
 - Additions
    - Add "Install Clean User Profiles" tweak.
    - Add "Run Clean User Profiles" button to tweaks.
+   - Add "Add Printer Search to Desktop" tweak.

@@ -1,4 +1,17 @@
 {
+    "WPFTweaksAddPrinterSearch": {
+    "Content": "Add Printer Search to Desktop",
+    "Description": "Adds a shortcut to automatically search for campus-local printers to device.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript": [
+      "Install-WinUtilPrinterSearch -install $true"
+    ],
+    "UndoScript": [
+      "Install-WinUtilPrinterSearch -install $false"
+    ]
+  },
   "WPFCleanUserProfilesButton": {
     "Content": "Run Clean User Profiles",
     "category": "z__Advanced Tweaks - CAUTION",
