@@ -1,5 +1,18 @@
 {
-    "WPFTweaksAddPrinterSearch": {
+  "WPFTweaksAppDefaults": {
+    "Content": "Set App Defaults",
+    "Description": "Set default apps according to res/AppDefaults.xml",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "Order": "a005_",
+    "InvokeScript": [
+      "dism /online /Import-DefaultAppAssociations:res\\AppDefaults.xml"
+    ],
+    "UndoScript": [
+      "dism /online /Remove-DefaultAppAssociations"
+    ]
+  },
+  "WPFTweaksAddPrinterSearch": {
     "Content": "Add Printer Search to Desktop",
     "Description": "Adds a shortcut to automatically search for campus-local printers to device.",
     "category": "Essential Tweaks",
