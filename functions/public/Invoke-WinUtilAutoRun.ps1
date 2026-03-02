@@ -14,6 +14,10 @@ function Invoke-WinUtilAutoRun {
 
     BusyWait
 
+    Write-Host "Installing applications..."
+    Invoke-WPFInstall
+    BusyWait
+
     Write-Host "Applying tweaks..."
     Invoke-WPFtweaksbutton
     BusyWait
@@ -38,10 +42,6 @@ function Invoke-WinUtilAutoRun {
 
     Write-Host "Applying features..."
     Invoke-WPFFeatureInstall
-    BusyWait
-
-    Write-Host "Installing applications..."
-    Invoke-WPFInstall
     BusyWait
 
     Write-Host "Done."
