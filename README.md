@@ -8,6 +8,7 @@ Changes here include:
 
 - Changes
    - Change winutildir to local res
+   - Switch autorun call order to installs, tweaks, features
 
 - Additions
    - Add "Install Clean User Profiles" tweak.
