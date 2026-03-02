@@ -1,4 +1,24 @@
 {
+  "WPFCleanUserProfilesButton": {
+    "Content": "Run Clean User Profiles",
+    "category": "z__Advanced Tweaks - CAUTION",
+    "panel": "1",
+    "Type": "Button",
+    "link": ""
+  },
+  "WPFTweaksCleanUserProfiles": {
+    "Content": "Install CleanUserProfiles",
+    "Description": "Automatically delete user profiles on restart. Works on shutdown too if hibernation is off.",
+    "category": "Essential Tweaks",
+    "panel": "1",
+    "InvokeScript": [
+      "Install-WinUtilCleanUserProfiles -install $true"
+    ],
+    "UndoScript": [
+      "Install-WinUtilCleanUserProfiles -install $false"
+    ],
+    "link": "https://github.com/KamaleiZestri/CleanUserProfiles"
+  },
   "WPFTweaksActivity": {
     "Content": "Disable Activity History",
     "Description": "Erases recent docs, clipboard, and run history.",
