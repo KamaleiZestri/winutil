@@ -17,3 +17,4 @@ Changes here include:
    - Add "Add Printer Search to Desktop" tweak.
    - Add "App defaults" tweak.
    - Add "Lid stays on while closed" tweak.
+   - Add "Restart Printer Spooler" button to tweaks.
