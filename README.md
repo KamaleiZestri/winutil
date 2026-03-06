@@ -9,10 +9,11 @@ Changes here include:
 - Changes
    - Change winutildir to local res
    - Switch autorun call order to installs, tweaks, features
-   - Invert `WPFToggleBingSearch` state
 
 - Additions
    - Add option to install local programs with additional arguments.
+   - Load `C:\Users\Default\NTUSER.DAT` to `"HKLM\DefaultUser` as a registry hive.
+   - Add "Disable Bing Search" tweak, based on the `WPFToggleBingSearch` toggle.
    - Add "Install Clean User Profiles" tweak.
    - Add "Run Clean User Profiles" button to tweaks.
    - Add "Add Printer Search to Desktop" tweak.

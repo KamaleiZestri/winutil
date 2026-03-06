@@ -71,6 +71,8 @@ function Invoke-WinUtilTweaks {
         }
     }
     if($sync.configs.tweaks.$CheckBox.registry) {
+        # load default user hive
+        reg.exe load "HKLM\\DefaultUser" "C:\\Users\\Default\\NTUSER.DAT"
         $sync.configs.tweaks.$CheckBox.registry | ForEach-Object {
             Write-Debug "$($psitem.Name) and state is $($psitem.$($values.registry))"
             if (($psitem.Path -imatch "hku") -and !(Get-PSDrive -Name HKU -ErrorAction SilentlyContinue)) {
@@ -83,6 +85,7 @@ function Invoke-WinUtilTweaks {
             }
             Set-WinUtilRegistry -Name $psitem.Name -Path $psitem.Path -Type $psitem.Type -Value $psitem.$($values.registry)
         }
+        reg.exe unload "HKLM\\DefaultUser"
     }
     if($sync.configs.tweaks.$CheckBox.$($values.ScriptType)) {
         $sync.configs.tweaks.$CheckBox.$($values.ScriptType) | ForEach-Object {
