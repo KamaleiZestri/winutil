@@ -69,9 +69,13 @@ function Install-WinUtilPrinterSearch
     }
 
     $searchText = ""
+    $locText = ""
 
-    $hexText = StringToHexString($searchText)
-    $hexLength = GetEncodedLength($searchText)
+    $searchHexText = StringToHexString($searchText)
+    $searchHexLength = GetEncodedLength($searchText)
+ 
+    $locHexText = StringToHexString($locText)
+    $locHexLength = GetEncodedLength($locText)
 
 
     # write output string
@@ -84,8 +88,8 @@ Form=70F077B5E27ED011913F00AA00C16E65DB
 ViewMode=0413000017
 EnableFilter=0000000000
 [Microsoft.Printers.MoreChoices]
-LocationLength=0100000001
-LocationValue=000000
+LocationLength=$locHexLength
+LocationValue=$locHexText
 color=0000000000
 duplex=0000000000
 stapling=0000000000
@@ -94,8 +98,8 @@ speed=0100000001
 sizeLength=0100000001
 sizeValue=000000
 [Microsoft.Printers]
-printerNameLength=$hexLength
-printerNameValue=$hexText
+printerNameLength=$searchHexLength
+printerNameValue=$searchHexText
 [Microsoft.PropertyWell]
 Items=0000000000
 "@
